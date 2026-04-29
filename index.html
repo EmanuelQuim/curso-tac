@@ -555,8 +555,20 @@
                 <div class="role-card" style="padding: 1rem;">
     <h3 style="font-size: 1rem; color: var(--primary); margin-bottom: 10px;">2. Desafío del Investigador Académico</h3>
     
-    <div style="position: relative; width: 100%; padding-top: 70%; background: #f8f9fc; border-radius: 10px; overflow: hidden; border: 1px solid #e3e6f0;">
+   <div id="contenedor-quiz" class="role-card" style="padding: 1.5rem; background: #ffffff; border-radius: 15px; border: 1px solid #e3e6f0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+    
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h3 style="font-size: 1.1rem; color: #4e73df; margin: 0; font-family: sans-serif;">
+            2. Desafío del Investigador Académico
+        </h3>
+        <button onclick="activarPantallaCompleta()" style="background: #4e73df; color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; display: flex; align-items: center; gap: 5px;">
+            <i class="fas fa-expand"></i> Pantalla Completa
+        </button>
+    </div>
+
+    <div style="position: relative; width: 100%; padding-top: 65%; background: #f8f9fc; border-radius: 10px; overflow: hidden; border: 1px solid #e3e6f0;">
         <iframe 
+            id="iframe-quiz"
             src="https://wayground.com/embed/quiz/69f1311b4e06d4d45a4b53cc" 
             title="Desafío del Investigador Académico" 
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
@@ -569,6 +581,20 @@
             <i class="fas fa-external-link-alt"></i> Fuente: Wayground
         </a>
     </div>
+</div>
+
+<script>
+function activarPantallaCompleta() {
+    var elem = document.getElementById("iframe-quiz");
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+    }
+}
+</script>
 </div>
 
                 <div class="role-card" style="padding: 1rem; max-width: 350px; margin: auto;">
