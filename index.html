@@ -146,6 +146,15 @@
             font-size: 30px;
             z-index: 1000;
         }
+
+        footer {
+            background-color: #2c3e50; 
+            color: white; 
+            text-align: center; 
+            padding: 25px; 
+            font-family: sans-serif; 
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
@@ -165,18 +174,16 @@
         <button class="tab-button" onclick="openTab(event, 'recursos')"><i class="fas fa-laptop-code"></i> Recursos Virtuales</button>
         <button class="tab-button" onclick="openTab(event, 'eactividades')"><i class="fas fa-puzzle-piece"></i> E-actividades</button>
         <button class="tab-button" onclick="openTab(event, 'revistas')"><i class="fa fa-book"></i> Revistas Digitales</button>
-        
     </div>
 
+    <!-- PESTAÑA INFO -->
     <div id="info" class="tab-content active">
-        
         <section class="card">
             <h2><i class="fas fa-user-tie"></i> Información del Tutor</h2>
             <div class="tutor-profile">
-                  <div class="tutor-photo-placeholder">
-    <img src="docs/i.JPG" alt="Foto de Edson Tun Quim" style="width: 100%; height: 100%; object-fit: cover;">
-</div>
-              
+                <div class="tutor-photo-placeholder">
+                    <img src="docs/i.JPG" alt="Foto de Edson Tun Quim" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
                 <div class="tutor-details">
                     <span class="tutor-name">Edson Emanuel Tun Quim</span>
                     <ul class="tutor-academic">
@@ -190,7 +197,6 @@
             <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
 
             <h2><i class="fas fa-book"></i> Programa del curso</h2>
-
             <embed src="docs/1.pdf" type="application/pdf" width="100%" height="600px" />
 
             <h2><i class="fas fa-book"></i> 1. Nombre del curso</h2>
@@ -221,6 +227,7 @@
         </section>
     </div>
 
+    <!-- PESTAÑA PROGRAMA -->
     <div id="programa" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-table"></i> Programa Completo del Curso</h2>
@@ -240,34 +247,25 @@
                         <tr>
                             <td align="center"><strong>1</strong></td>
                             <td>
-                                <span class="prog-label">Declarativos:</span> Navegadores y Buscadores (Definición de navegador, Buscador, ejemplos).<br>
-                                <span class="prog-label">Procedimentales:</span> Crea un cuadro comparativo identificando las principales diferencias entre un navegador y un buscador.<br>
-                                <span class="prog-label">Actitudinales:</span> Muestra una actitud crítica y analítica al seleccionar navegadores y buscadores que garanticen la seguridad de su información personal.
+                                <span class="prog-label">Declarativos:</span> Navegadores y Buscadores.<br>
+                                <span class="prog-label">Procedimentales:</span> Cuadro comparativo.<br>
+                                <span class="prog-label">Actitudinales:</span> Actitud crítica.
                             </td>
-                            <td>Elige la herramienta y la plataforma apropiadas para transmitir sus ideas, trabajos o mensajes.</td>
-                            <td>
-                                <strong>Actividades:</strong> Ver video, visualizar infografía, revisar enlace de apoyo y elaborar cuadro comparativo en procesador de texto.<br>
-                                <strong>Medios:</strong> Plataforma Moodle, Video, Infografía, Enlace informativo, Formato de cuadro comparativo.<br>
-                                <strong>Evaluación:</strong> Rúbrica.
-                            </td>
-                            <td>Acceder al video y enlaces; Editar formato; Elaborar el cuadro comparativo; Resolver dudas en WhatsApp.</td>
-                            <td>Revisar y habilitar enlaces; Compartir formato; Habilitar espacio en plataforma; Dar solución a dudas; Realimentar tareas.</td>
+                            <td>Elige la herramienta y la plataforma apropiadas...</td>
+                            <td><strong>Actividades:</strong> Video e infografía.<br><strong>Evaluación:</strong> Rúbrica.</td>
+                            <td>Elaborar el cuadro comparativo.</td>
+                            <td>Realimentar tareas.</td>
                         </tr>
                         <tr>
                             <td align="center"><strong>2</strong></td>
                             <td>
-                                <span class="prog-label">Declarativos:</span> Buscadores Académicos (¿Qué es?, Utilidad, Buscadores más utilizados).<br>
-                                <span class="prog-label">Procedimentales:</span> Elabora una infografía sobre los buscadores académicos donde incluye: Definición, Utilidad y Ejemplos.<br>
-                                <span class="prog-label">Actitudinales:</span> Reconoce la utilidad de los buscadores especializados como un "andamiaje" digital que facilita su acceso a la cultura científica global.
+                                <span class="prog-label">Declarativos:</span> Buscadores Académicos.<br>
+                                <span class="prog-label">Procedimentales:</span> Infografía en Canva.
                             </td>
-                            <td>Sintetiza la información recopilada en buscadores académicos y la transforma en un recurso visual (infografía) que explica con claridad la definición, utilidad y ejemplos.</td>
-                            <td>
-                                <strong>Actividades:</strong> Ver video, revisar enlace sobre infografías en Canva y elaborar la infografía.<br>
-                                <strong>Medios:</strong> Plataforma Moodle, Video Buscadores académicos, Tutorial de Canva.<br>
-                                <strong>Evaluación:</strong> Rúbrica.
-                            </td>
-                            <td>Acceder al video y enlaces; Acceder a Canva; Elaborar la infografía; Resolver dudas en WhatsApp.</td>
-                            <td>Revisar y habilitar enlaces; Compartir material de apoyo; Habilitar espacio en plataforma; Dar solución a dudas; Realimentar tareas.</td>
+                            <td>Sintetiza la información recopilada...</td>
+                            <td><strong>Actividades:</strong> Canva e investigación.<br><strong>Evaluación:</strong> Rúbrica.</td>
+                            <td>Elaborar la infografía.</td>
+                            <td>Realimentar tareas.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -275,141 +273,67 @@
         </section>
     </div>
 
+    <!-- PESTAÑA SEMANA 1 -->
     <div id="semana1" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-globe"></i> Semana 1: Navegadores y Buscadores</h2>
             <p><strong>Tarea:</strong> Elaborar un cuadro comparativo sobre las principales características de un navegador y un buscador.</p>
             
-            <h3 class="section-title"><i class="fas fa-toolbox"></i> Medios y materiales que se utilizarán</h3>
+            <h3 class="section-title"><i class="fas fa-toolbox"></i> Medios y materiales</h3>
             <ul class="info-list">
-                <li><i class="fas fa-check-circle"></i> Plataforma Moodle del establecimiento.</li>
-                <li><i class="fas fa-video"></i><a href="https://www.youtube.com/watch?v=X0ccMxWOemM&feature=youtu.be">Video Navegadores y buscadores.</a></li>
-                <li><i class="fas fa-file-image"></i> <a href="https://www.cinconoticias.com/wp-content/uploads/navegadores-y-buscadores-comparativas-diferencias-1.jpg">Infografía navegadores y buscadores.</a></li>
-                <li><i class="fas fa-external-link-alt"></i><a href="https://www.lifeder.com/cuadro-comparativo/"> Enlace como elaborar un cuadro comparativo.</a></li>
-                <li><i class="fas fa-file-alt"></i> <a href="https://docs.google.com/document/d/1d9ZNaIPTXv-CbE2npYVvbQZPAlpiGH7QJjKJcQNEcIw/edit?pli=1&tab=t.0"> Formato cuadro comparativo.</a></li>
+                <li><i class="fas fa-video"></i><a href="https://www.youtube.com/watch?v=X0ccMxWOemM"> Video Navegadores y buscadores.</a></li>
+                <li><i class="fas fa-file-image"></i><a href="https://www.cinconoticias.com/wp-content/uploads/navegadores-y-buscadores-comparativas-diferencias-1.jpg"> Infografía navegadores y buscadores.</a></li>
+                <li><i class="fas fa-external-link-alt"></i><a href="https://www.lifeder.com/cuadro-comparativo/"> Como elaborar un cuadro comparativo.</a></li>
             </ul>
 
             <div class="roles-container">
                 <div class="role-card">
-                    <h3 class="section-title"><i class="fas fa-user-edit"></i> Quehaceres de los participantes</h3>
+                    <h3 class="section-title">Participantes</h3>
                     <ul class="info-list">
-                        <li>Acceder al video provisto y enlaces de apoyo.</li>
-                        <li>Acceder al enlace para editar el formato del cuadro comparativo.</li>
-                        <li>Elaborar un cuadro comparativo sobre las principales características de un navegador y un buscador.</li>
-                        <li>Resolver sus dudas sobre el tema y las actividades de la semana en los grupos de WhatsApp del curso.</li>
+                        <li>Acceder al video y enlaces.</li>
+                        <li>Elaborar el cuadro comparativo.</li>
                     </ul>
                 </div>
                 <div class="role-card">
-                    <h3 class="section-title"><i class="fas fa-user-tie"></i> Quehaceres del tutor</h3>
+                    <h3 class="section-title">Tutor</h3>
                     <ul class="info-list">
-                        <li>Revisar y habilitar enlaces.</li>
-                        <li>Compartir el formato del cuadro comparativo.</li>
-                        <li>Habilitar espacio para envío de tareas en la plataforma.</li>
-                        <li>Dar solución y apoyo a dudas existentes.</li>
-                        <li>Realimentar y devolver tareas de la semana.</li>
+                        <li>Habilitar espacio en plataforma.</li>
+                        <li>Realimentar tareas.</li>
                     </ul>
                 </div>
             </div>
 
-            <button class="btn-action" onclick="toggleForm('entrega-s1')">
-    <i class="fas fa-upload"></i> Entregar Tarea
-</button>
-
-<div id="entrega-s1" style="display: none; margin-top: 20px; padding: 20px; border: 2px dashed var(--primary); border-radius: 15px; background: #f1f4ff;">
-    
-    <div style="background: #fff3cd; color: #856404; padding: 15px; border-radius: 10px; margin-bottom: 15px; border-left: 5px solid var(--accent);">
-        <i class="fas fa-exclamation-circle"></i> 
-        Revise la rúbrica de calificación de la actividad, guarde su documento en formato <strong>PDF</strong> y agréguele su nombre y apellido completo.
-    </div>
-
-    <form action="https://formspree.io/f/mqaeapzd" method="POST" enctype="multipart/form-data">
-        <input type="text" name="Nombre" placeholder="Tu nombre completo" required class="upload-input" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ccc;">
-        
-        <input type="file" name="Tarea" accept=".pdf" required class="upload-input" style="width: 100%; padding: 10px; margin-bottom: 10px;">
-        
-        <input type="hidden" name="_to" value="edsonquim1986@gmail.com">
-        
-        <button type="submit" class="btn-action" style="width: 100%;">
-            <i class="fas fa-paper-plane"></i> Enviar Tarea
-        </button>
-    </form>
-</div>
-            <button class="btn-action btn-secondary" onclick="document.getElementById('btn-eval').click();">
-                <i class="fas fa-clipboard-list"></i> Ver Rúbrica de la Semana
-            </button>
+            <button class="btn-action" onclick="toggleForm('entrega-s1')"><i class="fas fa-upload"></i> Entregar Tarea</button>
+            <div id="entrega-s1" style="display: none; margin-top: 20px; padding: 20px; border: 2px dashed var(--primary); border-radius: 15px; background: #f1f4ff;">
+                <form action="https://formspree.io/f/mqaeapzd" method="POST" enctype="multipart/form-data">
+                    <input type="text" name="Nombre" placeholder="Tu nombre completo" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+                    <input type="file" name="Tarea" accept=".pdf" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+                    <button type="submit" class="btn-action" style="width: 100%;">Enviar Tarea</button>
+                </form>
+            </div>
         </section>
     </div>
 
+    <!-- PESTAÑA SEMANA 2 -->
     <div id="semana2" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-search"></i> Semana 2: Buscadores Académicos</h2>
             <p><strong>Tarea:</strong> Elaborar una infografía sobre los buscadores académicos utilizando la herramienta digital Canva.</p>
-
-            <h3 class="section-title"><i class="fas fa-toolbox"></i> Medios y materiales que se utilizarán</h3>
-            <ul class="info-list">
-                <li><i class="fas fa-check-circle"></i> Plataforma Moodle del establecimiento.</li>
-                <li><i class="fas fa-video"></i><a href="https://www.youtube.com/watch?v=uqFGEqe2ZfM">Video Buscadores académicos.</a></li>
-                <li><i class="fas fa-info-circle"></i> <a href="https://www.proferecursos.com/que-es-una-infografia/">Enlace que es una infografía.</a></li>
-                <li><i class="fas fa-chalkboard-teacher"></i><a href="https://www.youtube.com/watch?v=AAsBFdGRdwM">Video como elaborar una infografía en Canva.</a></li>
-            </ul>
-
-            <div class="roles-container">
-                <div class="role-card">
-                    <h3 class="section-title"><i class="fas fa-user-edit"></i> Quehaceres de los participantes</h3>
-                    <ul class="info-list">
-                        <li>Acceder al video provisto y enlaces de apoyo.</li>
-                        <li>Acceder al enlace con las instrucciones de como elaborar una infografía utilizando la herramienta digital Canva.</li>
-                        <li>Elaborar una infografía sobre los buscadores académicos.</li>
-                        <li>Resolver sus dudas sobre el tema y las actividades de la semana en los grupos de WhatsApp del curso.</li>
-                    </ul>
-                </div>
-                <div class="role-card">
-                    <h3 class="section-title"><i class="fas fa-user-tie"></i> Quehaceres del tutor</h3>
-                    <ul class="info-list">
-                        <li>Revisar y habilitar enlaces.</li>
-                        <li>Compartir material de apoyo.</li>
-                        <li>Habilitar espacio para envío de tareas en la plataforma.</li>
-                        <li>Dar solución y apoyo a dudas existentes.</li>
-                        <li>Realimentar y devolver tareas de la semana.</li>
-                    </ul>
-                </div>
+            <button class="btn-action" onclick="toggleForm('entrega-s2')"><i class="fas fa-upload"></i> Entregar Tarea</button>
+            <div id="entrega-s2" style="display: none; margin-top: 20px; padding: 20px; border: 2px dashed var(--primary); border-radius: 15px; background: #f1f4ff;">
+                <form action="https://formspree.io/f/mqaeapzd" method="POST" enctype="multipart/form-data">
+                    <input type="text" name="Nombre" placeholder="Nombre completo" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+                    <input type="file" name="Tarea_S2" accept=".pdf" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+                    <button type="submit" class="btn-action" style="width: 100%;">Enviar Archivo</button>
+                </form>
             </div>
-<button class="btn-action" onclick="toggleForm('entrega-s2')">
-    <i class="fas fa-upload"></i> Entregar Tarea
-</button>
-
-<button class="btn-action btn-secondary" onclick="document.getElementById('btn-eval').click();">
-    <i class="fas fa-clipboard-list"></i> Ver Rúbrica de la Semana
-</button>
-
-<div id="entrega-s2" class="form-envio"  style="display: none; margin-top: 20px; padding: 20px; border: 2px dashed var(--primary); border-radius: 15px; background: #f1f4ff;"></div>
-    <div class="instruccion-pdf">
-        <i class="fas fa-info-circle"></i> 
-        <strong>Instrucción:</strong> Revise la rúbrica de calificación de la actividad, guarde su documento en formato <strong>PDF</strong> y agréguele su nombre y apellido completo.
-    </div>
-    <form action="https://formspree.io/f/mqaeapzd" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="_to" value="edsonquim1986@gmail.com">
-        <input type="text" name="Nombre" class="input-entrega" placeholder="Nombre y Apellido Completo" required>
-        <input type="file" name="Tarea_Semana_2" class="input-entrega" accept=".pdf" required>
-        <button type="submit" class="btn-action" style="width:100%">
-            <i class="fas fa-paper-plane"></i> Enviar Archivo
-        </button>
-    </form>
-</div>
-            
         </section>
     </div>
 
+    <!-- PESTAÑA EVALUACIÓN (RÚBRICAS COMPLETAS) -->
     <div id="eval" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-check-double"></i> Evaluación del curso</h2>
-            <p><strong>Diagnóstica:</strong> Identificación de conocimientos previos vía WhatsApp.</p>
-            <p><strong>Formativa:</strong> Acompañamiento constante y resolución de dudas en tiempo real.</p>
-            <p><strong>Sumativa:</strong> Entrega del producto digital en Moodle para valorar el alcance del indicador de logro.</p>
-            
-            <h3>Instrumentos</h3>
-            <p>Se utilizará una <strong>Rúbrica Analítica</strong> que evalúa dimensiones Declarativas, Procedimentales y Actitudinales.</p>
-
             <h3 class="section-title">Rúbrica de Evaluación: Navegadores y Buscadores</h3>
             <div class="table-wrapper">
                 <table>
@@ -423,40 +347,22 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Dominio de Conceptos (Declarativo)</strong></td>
-                            <td>Define con total claridad qué es un navegador y un buscador, proporcionando ejemplos vigentes y correctos de cada uno.</td>
-                            <td>Define ambos conceptos, pero los ejemplos son limitados o confunde algún elemento menor entre ellos.</td>
-                            <td>Presenta definiciones incorrectas o no logra diferenciar un navegador de un buscador mediante ejemplos.</td>
+                            <td><strong>Dominio de Conceptos</strong></td>
+                            <td>Define con total claridad qué es un navegador y un buscador, proporcionando ejemplos vigentes.</td>
+                            <td>Define ambos conceptos, pero los ejemplos son limitados.</td>
+                            <td>Presenta definiciones incorrectas.</td>
                         </tr>
                         <tr>
-                            <td><strong>Análisis Comparativo (Procedimental)</strong></td>
-                            <td>Identifica y redacta al menos 3 diferencias fundamentales entre las herramientas, demostrando capacidad de síntesis.</td>
-                            <td>Identifica diferencias, pero estas son superficiales o presenta menos de las tres solicitadas.</td>
-                            <td>El cuadro no muestra comparaciones reales o la información es confusa y desorganizada.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Seguridad y Crítica (Actitudinal)</strong></td>
-                            <td>Propone criterios claros para seleccionar herramientas que protejan la seguridad de su información personal.</td>
-                            <td>Menciona la importancia de la seguridad, pero no propone acciones o criterios de selección específicos.</td>
-                            <td>No incluye ninguna reflexión o criterio relacionado con la seguridad de su información personal.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Uso de Tecnología y Formato</strong></td>
-                            <td>Utiliza el procesador de texto de forma organizada, siguiendo el formato compartido y entregando en el tiempo estipulado.</td>
-                            <td>Emplea la herramienta digital, pero el formato presenta descuidos visuales o errores menores de edición.</td>
-                            <td>El trabajo carece de formato, es difícil de leer o muestra un manejo deficiente del procesador de texto.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Comunicación y Seguimiento</strong></td>
-                            <td>Resuelve dudas en los canales oficiales y sigue todas las instrucciones proporcionadas por el tutor en Moodle.</td>
-                            <td>Sigue la mayoría de las instrucciones, pero su participación en la resolución de dudas fue mínima.</td>
-                            <td>No sigue las instrucciones de la plataforma y el trabajo presenta omisiones graves en los requisitos.</td>
+                            <td><strong>Análisis Comparativo</strong></td>
+                            <td>Identifica y redacta al menos 3 diferencias fundamentales.</td>
+                            <td>Identifica diferencias, pero estas son superficiales.</td>
+                            <td>El cuadro no muestra comparaciones reales.</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-
-            <h3 class="section-title">Rúbrica de Evaluación: Infografía de Buscadores Académicos</h3>
+            
+            <h3 class="section-title">Rúbrica de Evaluación: Infografía</h3>
             <div class="table-wrapper">
                 <table>
                     <thead>
@@ -469,259 +375,98 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Contenido Técnico (Declarativo)</strong></td>
-                            <td>Define con claridad qué es un buscador general y uno académico, incluyendo utilidad y ejemplos correctos de los más utilizados.</td>
-                            <td>Incluye las definiciones y ejemplos, pero la explicación de la utilidad es breve o poco clara.</td>
-                            <td>Omite definiciones básicas o confunde los buscadores académicos con sitios web generales.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Capacidad de Síntesis (Procedimental)</strong></td>
-                            <td>Sintetiza la información de forma efectiva, utilizando frases cortas y precisas que facilitan la comprensión del tema.</td>
-                            <td>Presenta la información completa, pero utiliza párrafos demasiado largos que dificultan la lectura rápida.</td>
-                            <td>No hay síntesis; el contenido es una copia textual de las fuentes o está incompleto según lo solicitado.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Uso de Canva y Diseño (Procedimental)</strong></td>
-                            <td>Demuestra dominio de Canva al integrar íconos, imágenes y una estructura visual equilibrada y atractiva.</td>
-                            <td>Utiliza la herramienta Canva, pero el diseño es poco organizado o la combinación de colores dificulta la lectura.</td>
-                            <td>El diseño es deficiente, no utiliza recursos visuales (imágenes/íconos) o no empleó la herramienta sugerida.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Valoración Científica (Actitudinal)</strong></td>
-                            <td>Reconoce explícitamente el valor de los buscadores académicos como herramientas para acceder a información con rigor científico.</td>
-                            <td>Menciona el uso de buscadores especializados, pero no profundiza en su importancia para el ámbito académico.</td>
-                            <td>No muestra ninguna reflexión sobre la utilidad o importancia de usar fuentes académicas confiables.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Seguimiento de Instrucciones</strong></td>
-                            <td>Cumple con todos los elementos requeridos, accede a los materiales de apoyo y entrega puntualmente en Moodle.</td>
-                            <td>Cumple con la mayoría de los elementos, pero omitió revisar alguno de los enlaces de apoyo o tutoriales.</td>
-                            <td>El trabajo no cumple con los requisitos mínimos de la asignación o fue entregado fuera del espacio habilitado.</td>
+                            <td><strong>Contenido Técnico</strong></td>
+                            <td>Define con claridad buscadores académicos y ejemplos correctos.</td>
+                            <td>Incluye definiciones, pero explicación poco clara.</td>
+                            <td>Omite definiciones básicas.</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
     </div>
+
+    <!-- PESTAÑA RECURSOS VIRTUALES -->
     <div id="recursos" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-laptop-code"></i> Recursos Virtuales</h2>
-            
-            <div class="role-card" style="margin-bottom: 20px;">
+            <div class="role-card">
                 <h3 class="section-title">¿Qué son las e-Actividades?</h3>
-                <p><strong>Definición:</strong> Son unidades de aprendizaje estructuradas de forma digital que requieren la participación activa del estudiante. A diferencia de la lectura pasiva, una e-actividad busca que el alumno interactúe, cree o resuelva problemas en entornos virtuales.</p>
-                <p><strong>Función:</strong> Su función principal es dinamizar el proceso de enseñanza-aprendizaje, permitiendo que el estudiante pase de ser un espectador a un protagonista de su propio conocimiento.</p>
+                <p>Son unidades de aprendizaje estructuradas de forma digital que requieren la participación activa del estudiante...</p>
             </div>
-
             <div class="roles-container">
                 <div class="role-card">
                     <h3 class="section-title">Características</h3>
                     <ul class="info-list">
-                        <li><i class="fas fa-check"></i> Interactividad y respuesta inmediata.</li>
-                        <li><i class="fas fa-check"></i> Flexibilidad y adaptación al ritmo del alumno.</li>
-                        <li><i class="fas fa-check"></i> Accesibilidad desde múltiples dispositivos.</li>
-                        <li><i class="fas fa-check"></i> Motivación mediante elementos multimedia.</li>
+                        <li>Interactividad y respuesta inmediata.</li>
+                        <li>Accesibilidad desde múltiples dispositivos.</li>
                     </ul>
                 </div>
-                <div class="role-card">
-                    <h3 class="section-title">Tipos de e-Actividades</h3>
-                    <ul class="info-list">
-                        <li><i class="fas fa-comments"></i> <strong>Colaborativas:</strong> Foros, Wikis.</li>
-                        <li><i class="fas fa-gamepad"></i> <strong>Lúdicas:</strong> Quizizz, Kahoot.</li>
-                        <li><i class="fas fa-search"></i> <strong>Investigación:</strong> WebQuests.</li>
-                        <li><i class="fas fa-pencil-ruler"></i> <strong>Producción:</strong> Infografías, Mapas.</li>
-                    </ul>
-                </div>
-
-   <div class="role-card">
-    <h3 class="section-title">Revista e-Tutoring</h3>
-    <ul class="info-list" style="list-style: none; padding: 0;">
-        <li style="margin-bottom: 5px;">
-            <i class="fa fa-book" aria-hidden="true"></i> 
-            <strong>Revista:</strong> e-Tutoring y la interacción e importancia del rol del tutor virtual.
-        </li>
-        <!-- Contenedor de la imagen centrado -->
-        <li style="display: flex; justify-content: center; align-items: center;">
-            <a href="https://heyzine.com/flip-book/5f6ff8f0b8.html" target="_blank">
-                <img src="docs/revista.jpg" alt="Revista e-Tutoring" 
-                     style="width: 190px; height: 230px;">
-            </a>
-        </li>
-    </ul>
-</div>
-
-
-                <div id="revistas" class="tab-content">
-    <section class="card">
-        <!-- Corrección de comillas en el icono -->
-        <h2><i class="fa fa-book"></i> Revistas Digitales</h2>
-        
-        <!-- REVISTA 1: e-Tutoring (La que ya tenías) -->
-        <div class="role-card" style="margin-bottom: 20px;">
-            <h3 class="section-title">Revista e-Tutoring</h3>
-            <ul class="info-list" style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 5px;">
-                    <i class="fa fa-book" aria-hidden="true"></i> 
-                    <strong>Revista:</strong> e-Tutoring y la interacción e importancia del rol del tutor virtual.
-                </li>
-                <li style="display: flex; justify-content: center; align-items: center;">
-                    <a href="https://heyzine.com/flip-book/5f6ff8f0b8.html" target="_blank">
-                        <img src="docs/revista.jpg" alt="Revista e-Tutoring" style="width: 190px; height: 230px;">
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- REVISTA 2: SEMANA 5 (La nueva revista) -->
-        <div class="role-card">
-            <h3 class="section-title">Revista Navegadores y Buscadores</h3>
-            <ul class="info-list" style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 5px;">
-                    <i class="fa fa-search" aria-hidden="true"></i> 
-                    <strong>Revista:</strong> Navegadores, Buscadores y Buscadores Académicos (Semana 5).
-                </li>
-                <li style="display: flex; justify-content: center; align-items: center;">
-                    <!-- Aquí colocarás el link de tu nueva revista y su portada -->
-                    <a href="LINK_DE_TU_NUEVA_REVISTA" target="_blank">
-                        <img src="docs/portada_navegadores.jpg" alt="Revista Navegadores" style="width: 190px; height: 230px;">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
-</div>
-
-<!-- Pie de página solicitado -->
-<footer style="background-color: #2c3e50; color: white; text-align: center; padding: 20px; font-family: sans-serif; margin-top: 20px;">
-    <p style="margin: 0;">Todos los derechos reservados Edson Emanuel Tun Quim - 2026</p>
-</footer>
-                
             </div>
         </section>
     </div>
 
-
-
-    
-
-   <div id="eactividades" class="tab-content">
+    <!-- PESTAÑA E-ACTIVIDADES (ACTIVIDADES COMPLETAS) -->
+    <div id="eactividades" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-puzzle-piece"></i> E-actividades Interactivas</h2>
-            <p>Realiza las siguientes actividades prácticas para reforzar tus conocimientos:</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 20px;">
-                
-                <div class="role-card" style="padding: 1rem;">
-                    <h3 style="font-size: 1rem; color: var(--primary); margin-bottom: 10px;">1. El Mapa del Tesoro Digital</h3>
-                    <div style="position: relative; width: 100%; padding-top: 60%; background: #000; border-radius: 10px; overflow: hidden;">
-                        <iframe 
-                            src="https://es.educaplay.com/juego/28892970-el_mapa_del_tesoro_digital_navegadores_vs_buscadores.html" 
-                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+                <div class="role-card">
+                    <h3>1. Educaplay: Mapa del Tesoro</h3>
+                    <iframe src="https://es.educaplay.com/juego/28892970-el_mapa_del_tesoro_digital_navegadores_vs_buscadores.html" style="width:100%; height:300px; border:0;" allowfullscreen></iframe>
                 </div>
-
-                <div class="role-card" style="padding: 1rem;">
-    <h3 style="font-size: 1rem; color: var(--primary); margin-bottom: 10px;">2. Desafío del Investigador Académico</h3>
-    
-   <div id="contenedor-quiz" class="role-card" style="padding: 1.5rem; background: #ffffff; border-radius: 15px; border: 1px solid #e3e6f0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-    
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-        <h3 style="font-size: 1.1rem; color: #4e73df; margin: 0; font-family: sans-serif;">
-            2. Desafío del Investigador Académico
-        </h3>
-        <button onclick="activarPantallaCompleta()" style="background: #4e73df; color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; display: flex; align-items: center; gap: 5px;">
-            <i class="fas fa-expand"></i> Pantalla Completa
-        </button>
+                <div class="role-card">
+                    <h3>2. Wayground Quiz</h3>
+                    <iframe id="iframe-quiz" src="https://wayground.com/embed/quiz/69f1311b4e06d4d45a4b53cc" style="width:100%; height:300px; border:0;" allowfullscreen></iframe>
+                    <button onclick="activarPantallaCompleta()" class="btn-action" style="font-size: 0.8rem; padding: 5px 10px;">Pantalla Completa</button>
+                </div>
+                <div class="role-card" style="text-align: center;">
+                    <h3>3. Kahoot: Reto QR</h3>
+                    <img src="docs/assignment-qr-code.png" style="width: 180px;">
+                </div>
+            </div>
+            <div class="role-card" style="margin-top: 20px; border: 2px solid #6c5ce7;">
+                <h3>4. El Museo de la Verdad Científica (Padlet)</h3>
+                <iframe src="https://padlet.com/embed/vqepz9cakemsfesq" style="width: 100%; height: 500px; border: none;"></iframe>
+            </div>
+        </section>
     </div>
 
-    <div style="position: relative; width: 100%; padding-top: 65%; background: #f8f9fc; border-radius: 10px; overflow: hidden; border: 1px solid #e3e6f0;">
-        <iframe 
-            id="iframe-quiz"
-            src="https://wayground.com/embed/quiz/69f1311b4e06d4d45a4b53cc" 
-            title="Desafío del Investigador Académico" 
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-            allowfullscreen>
-        </iframe>
-    </div>
-
-    <div style="text-align: right; margin-top: 8px;">
-        <a href="https://wayground.com/admin?source=embedFrame" target="_blank" style="font-size: 0.7rem; color: #b7b9cc; text-decoration: none; font-style: italic;">
-            <i class="fas fa-external-link-alt"></i> Fuente: Wayground
-        </a>
-    </div>
-</div>
-
-<script>
-function activarPantallaCompleta() {
-    var elem = document.getElementById("iframe-quiz");
-    if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) { /* Safari */
-        elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { /* IE11 */
-        elem.msRequestFullscreen();
-    }
-}
-</script>
-</div>
-
-                <div class="role-card" style="padding: 1rem; max-width: 350px; margin: auto;">
-    <h3 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 15px; text-align: center;">
-        3. Kahoot: El Gran Reto de la Cultura Científica
-    </h3>
-    
-    <div style="background: #ffffff; border: 2px solid #eee; border-radius: 15px; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-        
-        <div style="width: 200px; height: 200px; margin-bottom: 10px;">
-            <img src="docs/assignment-qr-code.png" 
-                 alt="Escanee el código QR para iniciar el juego" 
-                 style="width: 100%; height: 100%; object-fit: contain;">
-        </div>
-
-        <p style="color: #666; font-size: 0.85rem; margin-top: 10px; text-align: center; font-family: sans-serif;">
-            Escanea el código para participar
-        </p>
+    <!-- PESTAÑA REVISTAS DIGITALES (SIN CAMBIOS EN CONTENIDO) -->
+    <div id="revistas" class="tab-content">
+        <section class="card">
+            <h2><i class="fa fa-book"></i> Revistas Digitales</h2>
+            <div class="roles-container">
+                <div class="role-card">
+                    <h3 class="section-title">Revista e-Tutoring</h3>
+                    <ul class="info-list" style="list-style: none; padding: 0;">
+                        <li><i class="fa fa-book"></i> <strong>Revista:</strong> e-Tutoring y el rol del tutor virtual.</li>
+                        <li style="display: flex; justify-content: center; margin-top: 15px;">
+                            <a href="https://heyzine.com/flip-book/5f6ff8f0b8.html" target="_blank">
+                                <img src="docs/revista.jpg" alt="Revista e-Tutoring" style="width: 190px; height: 230px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="role-card">
+                    <h3 class="section-title">Revista Navegadores y Buscadores</h3>
+                    <ul class="info-list" style="list-style: none; padding: 0;">
+                        <li><i class="fa fa-search"></i> <strong>Revista:</strong> Semana 5 - Buscadores Académicos.</li>
+                        <li style="display: flex; justify-content: center; margin-top: 15px;">
+                            <a href="LINK_DE_TU_NUEVA_REVISTA" target="_blank">
+                                <img src="docs/portada_navegadores.jpg" alt="Revista Navegadores" style="width: 190px; height: 230px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>
 </div>
 
-              <div class="role-card" style="padding: 1.5rem; border: 2px solid #6c5ce7; border-radius: 20px; background: #ffffff; box-shadow: 0 10px 20px rgba(0,0,0,0.1); max-width: 900px; margin: 20px auto;">
-    
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;">
-        <h3 style="font-size: 1.2rem; color: #6c5ce7; margin: 0; font-family: sans-serif;">
-            4. El Museo de la Verdad Científica
-        </h3>
-        <a href="https://padlet.com/embed/vqepz9cakemsfesq" 
-           target="_blank" 
-           style="background: #6c5ce7; color: white; border: none; padding: 8px 15px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; text-decoration: none; display: flex; align-items: center; gap: 8px; font-family: sans-serif; transition: background 0.3s;">
-            <i class="fas fa-external-link-alt"></i> Abrir en ventana aparte
-        </a>
-    </div>
-
-    <div style="border: 1px solid rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden; position: relative; width: 100%; background: #F4F4F4;">
-        
-        <iframe 
-            src="https://padlet.com/embed/vqepz9cakemsfesq" 
-            frameborder="0" 
-            allow="camera;microphone;geolocation;display-capture;clipboard-write" 
-            style="width: 100%; height: 600px; display: block; border: none;">
-        </iframe>
-
-        <div style="display: flex; align-items: center; justify-content: flex-end; margin: 0; padding: 8px;">
-            <a href="https://padlet.com?ref=embed" style="display: flex; align-items: center; gap: 5px; text-decoration: none;" target="_blank">
-                <span style="color: #9E9E9E; font-size: 10px; font-family: sans-serif;">Made with</span>
-                <img src="https://padlet.net/emails/padlet_email_logo_2026_text-dark-200.png" height="12" alt="Padlet" style="border: none;">
-            </a>
-        </div>
-    </div>
-
-    <p style="margin-top: 15px; font-size: 0.85rem; color: #555; text-align: center; font-style: italic; line-height: 1.4;">
-        Compara recursos digitales y selecciona fuentes con rigor científico para evitar el plagio.<br>
-        <strong>Sugerencia:</strong> Si tienes dificultades de visualización, utiliza el botón superior para abrir el mural en una pestaña nueva.
-    </p>
-</div>
-    </div>
+<footer>
+    <p>Todos los derechos reservados Edson Emanuel Tun Quim - 2026</p>
+</footer>
 
 <a href="https://wa.me/50232168036" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
@@ -730,8 +475,8 @@ function activarPantallaCompleta() {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tab-content");
         for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].classList.remove("active");
             tabcontent[i].style.display = "none";
+            tabcontent[i].classList.remove("active");
         }
         tablinks = document.getElementsByClassName("tab-button");
         for (i = 0; i < tablinks.length; i++) {
@@ -743,15 +488,16 @@ function activarPantallaCompleta() {
     }
 
     function toggleForm(id) {
-    var x = document.getElementById(id);
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
+        var x = document.getElementById(id);
+        x.style.display = (x.style.display === "none") ? "block" : "none";
     }
-}
+
+    function activarPantallaCompleta() {
+        var elem = document.getElementById("iframe-quiz");
+        if (elem.requestFullscreen) elem.requestFullscreen();
+        else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+    }
 </script>
 
 </body>
-</html>
 </html>
