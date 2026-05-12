@@ -164,18 +164,17 @@
         <button class="tab-button" id="btn-eval" onclick="openTab(event, 'eval')"><i class="fas fa-clipboard-check"></i> Evaluación</button>
         <button class="tab-button" onclick="openTab(event, 'recursos')"><i class="fas fa-laptop-code"></i> Recursos Virtuales</button>
         <button class="tab-button" onclick="openTab(event, 'eactividades')"><i class="fas fa-puzzle-piece"></i> E-actividades</button>
-        <button class="tab-button" onclick="openTab(event, 'revistas')"><i class="fas fa-puzzle-piece"></i> Revistas Digitales</button>
+        <button class="tab-button" onclick="openTab(event, 'revistas')"><i class="fas fa-book"></i> Revistas Digitales</button>
     </div>
 
+    <!-- PESTAÑA INFO -->
     <div id="info" class="tab-content active">
-        
         <section class="card">
             <h2><i class="fas fa-user-tie"></i> Información del Tutor</h2>
             <div class="tutor-profile">
-                  <div class="tutor-photo-placeholder">
-    <img src="docs/i.JPG" alt="Foto de Edson Tun Quim" style="width: 100%; height: 100%; object-fit: cover;">
-</div>
-              
+                <div class="tutor-photo-placeholder">
+                    <img src="docs/i.JPG" alt="Foto de Edson Tun Quim" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
                 <div class="tutor-details">
                     <span class="tutor-name">Edson Emanuel Tun Quim</span>
                     <ul class="tutor-academic">
@@ -189,7 +188,6 @@
             <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
 
             <h2><i class="fas fa-book"></i> Programa del curso</h2>
-
             <embed src="docs/1.pdf" type="application/pdf" width="100%" height="600px" />
 
             <h2><i class="fas fa-book"></i> 1. Nombre del curso</h2>
@@ -220,6 +218,7 @@
         </section>
     </div>
 
+    <!-- PESTAÑA PROGRAMA -->
     <div id="programa" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-table"></i> Programa Completo del Curso</h2>
@@ -274,6 +273,7 @@
         </section>
     </div>
 
+    <!-- PESTAÑA SEMANA 1 -->
     <div id="semana1" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-globe"></i> Semana 1: Navegadores y Buscadores</h2>
@@ -282,10 +282,10 @@
             <h3 class="section-title"><i class="fas fa-toolbox"></i> Medios y materiales que se utilizarán</h3>
             <ul class="info-list">
                 <li><i class="fas fa-check-circle"></i> Plataforma Moodle del establecimiento.</li>
-                <li><i class="fas fa-video"></i><a href="https://www.youtube.com/watch?v=X0ccMxWOemM&feature=youtu.be">Video Navegadores y buscadores.</a></li>
-                <li><i class="fas fa-file-image"></i> <a href="https://www.cinconoticias.com/wp-content/uploads/navegadores-y-buscadores-comparativas-diferencias-1.jpg">Infografía navegadores y buscadores.</a></li>
-                <li><i class="fas fa-external-link-alt"></i><a href="https://www.lifeder.com/cuadro-comparativo/"> Enlace como elaborar un cuadro comparativo.</a></li>
-                <li><i class="fas fa-file-alt"></i> <a href="https://docs.google.com/document/d/1d9ZNaIPTXv-CbE2npYVvbQZPAlpiGH7QJjKJcQNEcIw/edit?pli=1&tab=t.0"> Formato cuadro comparativo.</a></li>
+                <li><i class="fas fa-video"></i><a href="https://www.youtube.com/watch?v=X0ccMxWOemM&feature=youtu.be" target="_blank">Video Navegadores y buscadores.</a></li>
+                <li><i class="fas fa-file-image"></i> <a href="https://www.cinconoticias.com/wp-content/uploads/navegadores-y-buscadores-comparativas-diferencias-1.jpg" target="_blank">Infografía navegadores y buscadores.</a></li>
+                <li><i class="fas fa-external-link-alt"></i><a href="https://www.lifeder.com/cuadro-comparativo/" target="_blank"> Enlace como elaborar un cuadro comparativo.</a></li>
+                <li><i class="fas fa-file-alt"></i> <a href="https://docs.google.com/document/d/1d9ZNaIPTXv-CbE2npYVvbQZPAlpiGH7QJjKJcQNEcIw/edit?pli=1&tab=t.0" target="_blank"> Formato cuadro comparativo.</a></li>
             </ul>
 
             <div class="roles-container">
@@ -311,34 +311,30 @@
             </div>
 
             <button class="btn-action" onclick="toggleForm('entrega-s1')">
-    <i class="fas fa-upload"></i> Entregar Tarea
-</button>
+                <i class="fas fa-upload"></i> Entregar Tarea
+            </button>
 
-<div id="entrega-s1" style="display: none; margin-top: 20px; padding: 20px; border: 2px dashed var(--primary); border-radius: 15px; background: #f1f4ff;">
-    
-    <div style="background: #fff3cd; color: #856404; padding: 15px; border-radius: 10px; margin-bottom: 15px; border-left: 5px solid var(--accent);">
-        <i class="fas fa-exclamation-circle"></i> 
-        Revise la rúbrica de calificación de la actividad, guarde su documento en formato <strong>PDF</strong> y agréguele su nombre y apellido completo.
-    </div>
-
-    <form action="https://formspree.io/f/mqaeapzd" method="POST" enctype="multipart/form-data">
-        <input type="text" name="Nombre" placeholder="Tu nombre completo" required class="upload-input" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ccc;">
-        
-        <input type="file" name="Tarea" accept=".pdf" required class="upload-input" style="width: 100%; padding: 10px; margin-bottom: 10px;">
-        
-        <input type="hidden" name="_to" value="edsonquim1986@gmail.com">
-        
-        <button type="submit" class="btn-action" style="width: 100%;">
-            <i class="fas fa-paper-plane"></i> Enviar Tarea
-        </button>
-    </form>
-</div>
+            <div id="entrega-s1" style="display: none; margin-top: 20px; padding: 20px; border: 2px dashed var(--primary); border-radius: 15px; background: #f1f4ff;">
+                <div style="background: #fff3cd; color: #856404; padding: 15px; border-radius: 10px; margin-bottom: 15px; border-left: 5px solid var(--accent);">
+                    <i class="fas fa-exclamation-circle"></i> 
+                    Revise la rúbrica de calificación de la actividad, guarde su documento en formato <strong>PDF</strong> y agréguele su nombre y apellido completo.
+                </div>
+                <form action="https://formspree.io/f/mqaeapzd" method="POST" enctype="multipart/form-data">
+                    <input type="text" name="Nombre" placeholder="Tu nombre completo" required style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ccc;">
+                    <input type="file" name="Tarea" accept=".pdf" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+                    <input type="hidden" name="_to" value="edsonquim1986@gmail.com">
+                    <button type="submit" class="btn-action" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Enviar Tarea
+                    </button>
+                </form>
+            </div>
             <button class="btn-action btn-secondary" onclick="document.getElementById('btn-eval').click();">
                 <i class="fas fa-clipboard-list"></i> Ver Rúbrica de la Semana
             </button>
         </section>
     </div>
 
+    <!-- PESTAÑA SEMANA 2 -->
     <div id="semana2" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-search"></i> Semana 2: Buscadores Académicos</h2>
@@ -347,9 +343,9 @@
             <h3 class="section-title"><i class="fas fa-toolbox"></i> Medios y materiales que se utilizarán</h3>
             <ul class="info-list">
                 <li><i class="fas fa-check-circle"></i> Plataforma Moodle del establecimiento.</li>
-                <li><i class="fas fa-video"></i><a href="https://www.youtube.com/watch?v=uqFGEqe2ZfM">Video Buscadores académicos.</a></li>
-                <li><i class="fas fa-info-circle"></i> <a href="https://www.proferecursos.com/que-es-una-infografia/">Enlace que es una infografía.</a></li>
-                <li><i class="fas fa-chalkboard-teacher"></i><a href="https://www.youtube.com/watch?v=AAsBFdGRdwM">Video como elaborar una infografía en Canva.</a></li>
+                <li><i class="fas fa-video"></i><a href="https://www.youtube.com/watch?v=uqFGEqe2ZfM" target="_blank">Video Buscadores académicos.</a></li>
+                <li><i class="fas fa-info-circle"></i> <a href="https://www.proferecursos.com/que-es-una-infografia/" target="_blank">Enlace que es una infografía.</a></li>
+                <li><i class="fas fa-chalkboard-teacher"></i><a href="https://www.youtube.com/watch?v=AAsBFdGRdwM" target="_blank">Video como elaborar una infografía en Canva.</a></li>
             </ul>
 
             <div class="roles-container">
@@ -373,32 +369,33 @@
                     </ul>
                 </div>
             </div>
-<button class="btn-action" onclick="toggleForm('entrega-s2')">
-    <i class="fas fa-upload"></i> Entregar Tarea
-</button>
 
-<button class="btn-action btn-secondary" onclick="document.getElementById('btn-eval').click();">
-    <i class="fas fa-clipboard-list"></i> Ver Rúbrica de la Semana
-</button>
+            <button class="btn-action" onclick="toggleForm('entrega-s2')">
+                <i class="fas fa-upload"></i> Entregar Tarea
+            </button>
 
-<div id="entrega-s2" class="form-envio"  style="display: none; margin-top: 20px; padding: 20px; border: 2px dashed var(--primary); border-radius: 15px; background: #f1f4ff;"></div>
-    <div class="instruccion-pdf">
-        <i class="fas fa-info-circle"></i> 
-        <strong>Instrucción:</strong> Revise la rúbrica de calificación de la actividad, guarde su documento en formato <strong>PDF</strong> y agréguele su nombre y apellido completo.
-    </div>
-    <form action="https://formspree.io/f/mqaeapzd" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="_to" value="edsonquim1986@gmail.com">
-        <input type="text" name="Nombre" class="input-entrega" placeholder="Nombre y Apellido Completo" required>
-        <input type="file" name="Tarea_Semana_2" class="input-entrega" accept=".pdf" required>
-        <button type="submit" class="btn-action" style="width:100%">
-            <i class="fas fa-paper-plane"></i> Enviar Archivo
-        </button>
-    </form>
-</div>
-            
+            <button class="btn-action btn-secondary" onclick="document.getElementById('btn-eval').click();">
+                <i class="fas fa-clipboard-list"></i> Ver Rúbrica de la Semana
+            </button>
+
+            <div id="entrega-s2" style="display: none; margin-top: 20px; padding: 20px; border: 2px dashed var(--primary); border-radius: 15px; background: #f1f4ff;">
+                <div style="background: #fff3cd; color: #856404; padding: 15px; border-radius: 10px; margin-bottom: 15px; border-left: 5px solid var(--accent);">
+                    <i class="fas fa-info-circle"></i> 
+                    <strong>Instrucción:</strong> Revise la rúbrica de calificación de la actividad, guarde su documento en formato <strong>PDF</strong> y agréguele su nombre y apellido completo.
+                </div>
+                <form action="https://formspree.io/f/mqaeapzd" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="_to" value="edsonquim1986@gmail.com">
+                    <input type="text" name="Nombre" placeholder="Nombre y Apellido Completo" required style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ccc;">
+                    <input type="file" name="Tarea_Semana_2" accept=".pdf" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+                    <button type="submit" class="btn-action" style="width:100%">
+                        <i class="fas fa-paper-plane"></i> Enviar Archivo
+                    </button>
+                </form>
+            </div>
         </section>
     </div>
 
+    <!-- PESTAÑA EVALUACIÓN -->
     <div id="eval" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-check-double"></i> Evaluación del curso</h2>
@@ -502,6 +499,8 @@
             </div>
         </section>
     </div>
+
+    <!-- PESTAÑA RECURSOS -->
     <div id="recursos" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-laptop-code"></i> Recursos Virtuales</h2>
@@ -532,28 +531,25 @@
                     </ul>
                 </div>
 
-   <div class="role-card">
-    <h3 class="section-title">Revista e-Tutoring</h3>
-    <ul class="info-list" style="list-style: none; padding: 0;">
-        <li style="margin-bottom: 5px;">
-            <i class="fa fa-book" aria-hidden="true"></i> 
-            <strong>Revista:</strong> e-Tutoring y la interacción e importancia del rol del tutor virtual.
-        </li>
-        <!-- Contenedor de la imagen centrado -->
-        <li style="display: flex; justify-content: center; align-items: center;">
-            <a href="https://heyzine.com/flip-book/5f6ff8f0b8.html" target="_blank">
-                <img src="docs/revista.jpg" alt="Revista e-Tutoring" 
-                     style="width: 190px; height: 230px;">
-            </a>
-        </li>
-    </ul>
-</div>
-                
+                <div class="role-card">
+                    <h3 class="section-title">Revista e-Tutoring</h3>
+                    <ul class="info-list" style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;">
+                            <i class="fa fa-book" aria-hidden="true"></i> 
+                            <strong>Revista:</strong> e-Tutoring y la interacción e importancia del rol del tutor virtual.
+                        </li>
+                        <li style="display: flex; justify-content: center; align-items: center;">
+                            <a href="https://heyzine.com/flip-book/5f6ff8f0b8.html" target="_blank">
+                                <img src="docs/revista.jpg" alt="Revista e-Tutoring" style="width: 190px; height: 230px;">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
     </div>
 
-<!-- PESTAÑA: REVISTAS DIGITALES (AGREGADA) -->
+    <!-- PESTAÑA REVISTAS DIGITALES -->
     <div id="revistas" class="tab-content">
         <section class="card">
             <h2><i class="fa fa-book"></i> Revistas Digitales</h2>
@@ -582,9 +578,10 @@
                 </div>
             </div>
         </section>
+    </div>
 
-
-   <div id="eactividades" class="tab-content">
+    <!-- PESTAÑA E-ACTIVIDADES -->
+    <div id="eactividades" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-puzzle-piece"></i> E-actividades Interactivas</h2>
             <p>Realiza las siguientes actividades prácticas para reforzar tus conocimientos:</p>
@@ -594,117 +591,49 @@
                 <div class="role-card" style="padding: 1rem;">
                     <h3 style="font-size: 1rem; color: var(--primary); margin-bottom: 10px;">1. El Mapa del Tesoro Digital</h3>
                     <div style="position: relative; width: 100%; padding-top: 60%; background: #000; border-radius: 10px; overflow: hidden;">
-                        <iframe 
-                            src="https://es.educaplay.com/juego/28892970-el_mapa_del_tesoro_digital_navegadores_vs_buscadores.html" 
-                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-                            allowfullscreen>
-                        </iframe>
+                        <iframe src="https://es.educaplay.com/juego/28892970-el_mapa_del_tesoro_digital_navegadores_vs_buscadores.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
                     </div>
                 </div>
 
                 <div class="role-card" style="padding: 1rem;">
-    <h3 style="font-size: 1rem; color: var(--primary); margin-bottom: 10px;">2. Desafío del Investigador Académico</h3>
-    
-   <div id="contenedor-quiz" class="role-card" style="padding: 1.5rem; background: #ffffff; border-radius: 15px; border: 1px solid #e3e6f0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-    
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-        <h3 style="font-size: 1.1rem; color: #4e73df; margin: 0; font-family: sans-serif;">
-            2. Desafío del Investigador Académico
-        </h3>
-        <button onclick="activarPantallaCompleta()" style="background: #4e73df; color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; display: flex; align-items: center; gap: 5px;">
-            <i class="fas fa-expand"></i> Pantalla Completa
-        </button>
-    </div>
-
-    <div style="position: relative; width: 100%; padding-top: 65%; background: #f8f9fc; border-radius: 10px; overflow: hidden; border: 1px solid #e3e6f0;">
-        <iframe 
-            id="iframe-quiz"
-            src="https://wayground.com/embed/quiz/69f1311b4e06d4d45a4b53cc" 
-            title="Desafío del Investigador Académico" 
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-            allowfullscreen>
-        </iframe>
-    </div>
-
-    <div style="text-align: right; margin-top: 8px;">
-        <a href="https://wayground.com/admin?source=embedFrame" target="_blank" style="font-size: 0.7rem; color: #b7b9cc; text-decoration: none; font-style: italic;">
-            <i class="fas fa-external-link-alt"></i> Fuente: Wayground
-        </a>
-    </div>
-</div>
-
-<script>
-function activarPantallaCompleta() {
-    var elem = document.getElementById("iframe-quiz");
-    if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) { /* Safari */
-        elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { /* IE11 */
-        elem.msRequestFullscreen();
-    }
-}
-</script>
-</div>
+                    <div id="contenedor-quiz" style="background: #ffffff; border-radius: 15px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                            <h3 style="font-size: 1.1rem; color: #4e73df; margin: 0;">2. Desafío del Investigador Académico</h3>
+                            <button onclick="activarPantallaCompleta()" style="background: #4e73df; color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; font-size: 0.8rem;">
+                                <i class="fas fa-expand"></i> Pantalla Completa
+                            </button>
+                        </div>
+                        <div style="position: relative; width: 100%; padding-top: 65%; background: #f8f9fc; border-radius: 10px; overflow: hidden; border: 1px solid #e3e6f0;">
+                            <iframe id="iframe-quiz" src="https://wayground.com/embed/quiz/69f1311b4e06d4d45a4b53cc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="role-card" style="padding: 1rem; max-width: 350px; margin: auto;">
-    <h3 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 15px; text-align: center;">
-        3. Kahoot: El Gran Reto de la Cultura Científica
-    </h3>
-    
-    <div style="background: #ffffff; border: 2px solid #eee; border-radius: 15px; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-        
-        <div style="width: 200px; height: 200px; margin-bottom: 10px;">
-            <img src="docs/assignment-qr-code.png" 
-                 alt="Escanee el código QR para iniciar el juego" 
-                 style="width: 100%; height: 100%; object-fit: contain;">
-        </div>
+                    <h3 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 15px; text-align: center;">3. Kahoot: El Gran Reto</h3>
+                    <div style="background: #ffffff; border: 2px solid #eee; border-radius: 15px; padding: 20px; display: flex; flex-direction: column; align-items: center;">
+                        <div style="width: 200px; height: 200px;">
+                            <img src="docs/assignment-qr-code.png" alt="QR Kahoot" style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                        <p style="color: #666; font-size: 0.85rem; margin-top: 10px;">Escanea para participar</p>
+                    </div>
+                </div>
 
-        <p style="color: #666; font-size: 0.85rem; margin-top: 10px; text-align: center; font-family: sans-serif;">
-            Escanea el código para participar
-        </p>
-    </div>
-</div>
-
-              <div class="role-card" style="padding: 1.5rem; border: 2px solid #6c5ce7; border-radius: 20px; background: #ffffff; box-shadow: 0 10px 20px rgba(0,0,0,0.1); max-width: 900px; margin: 20px auto;">
-    
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;">
-        <h3 style="font-size: 1.2rem; color: #6c5ce7; margin: 0; font-family: sans-serif;">
-            4. El Museo de la Verdad Científica
-        </h3>
-        <a href="https://padlet.com/embed/vqepz9cakemsfesq" 
-           target="_blank" 
-           style="background: #6c5ce7; color: white; border: none; padding: 8px 15px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; text-decoration: none; display: flex; align-items: center; gap: 8px; font-family: sans-serif; transition: background 0.3s;">
-            <i class="fas fa-external-link-alt"></i> Abrir en ventana aparte
-        </a>
-    </div>
-
-    <div style="border: 1px solid rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden; position: relative; width: 100%; background: #F4F4F4;">
-        
-        <iframe 
-            src="https://padlet.com/embed/vqepz9cakemsfesq" 
-            frameborder="0" 
-            allow="camera;microphone;geolocation;display-capture;clipboard-write" 
-            style="width: 100%; height: 600px; display: block; border: none;">
-        </iframe>
-
-        <div style="display: flex; align-items: center; justify-content: flex-end; margin: 0; padding: 8px;">
-            <a href="https://padlet.com?ref=embed" style="display: flex; align-items: center; gap: 5px; text-decoration: none;" target="_blank">
-                <span style="color: #9E9E9E; font-size: 10px; font-family: sans-serif;">Made with</span>
-                <img src="https://padlet.net/emails/padlet_email_logo_2026_text-dark-200.png" height="12" alt="Padlet" style="border: none;">
-            </a>
-        </div>
-    </div>
-
-    <p style="margin-top: 15px; font-size: 0.85rem; color: #555; text-align: center; font-style: italic; line-height: 1.4;">
-        Compara recursos digitales y selecciona fuentes con rigor científico para evitar el plagio.<br>
-        <strong>Sugerencia:</strong> Si tienes dificultades de visualización, utiliza el botón superior para abrir el mural en una pestaña nueva.
-    </p>
-</div>
-    </div>
-            
+                <div class="role-card" style="grid-column: 1 / -1; border: 2px solid #6c5ce7; background: #ffffff;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap;">
+                        <h3 style="font-size: 1.2rem; color: #6c5ce7; margin: 0;">4. El Museo de la Verdad Científica</h3>
+                        <a href="https://padlet.com/embed/vqepz9cakemsfesq" target="_blank" style="background: #6c5ce7; color: white; padding: 8px 15px; border-radius: 8px; text-decoration: none;">
+                            <i class="fas fa-external-link-alt"></i> Abrir en ventana aparte
+                        </a>
+                    </div>
+                    <div style="border-radius: 12px; overflow: hidden;">
+                        <iframe src="https://padlet.com/embed/vqepz9cakemsfesq" style="width: 100%; height: 600px; border: none;"></iframe>
+                    </div>
+                </div>
+            </div>
         </section>
-            
+    </div>
+</div>
 
 <a href="https://wa.me/50232168036" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
@@ -713,8 +642,8 @@ function activarPantallaCompleta() {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tab-content");
         for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].classList.remove("active");
             tabcontent[i].style.display = "none";
+            tabcontent[i].classList.remove("active");
         }
         tablinks = document.getElementsByClassName("tab-button");
         for (i = 0; i < tablinks.length; i++) {
@@ -726,13 +655,20 @@ function activarPantallaCompleta() {
     }
 
     function toggleForm(id) {
-    var x = document.getElementById(id);
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
+        var x = document.getElementById(id);
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
     }
-}
+
+    function activarPantallaCompleta() {
+        var elem = document.getElementById("iframe-quiz");
+        if (elem.requestFullscreen) { elem.requestFullscreen(); }
+        else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); }
+        else if (elem.msRequestFullscreen) { elem.msRequestFullscreen(); }
+    }
 </script>
 
 </body>
