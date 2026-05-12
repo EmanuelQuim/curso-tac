@@ -27,6 +27,60 @@
             line-height: 1.6;
         }
 
+        /* --- ESTILOS DEL MODAL DE BIENVENIDA (GAMMA) --- */
+        #modal-presentacion {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            width: 95%;
+            height: 80%;
+            background: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 40px rgba(0,0,0,0.6);
+        }
+
+        .modal-content iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .btn-saltar {
+            margin-top: 20px;
+            padding: 15px 40px;
+            background: var(--accent);
+            color: var(--dark);
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 20px rgba(246, 194, 62, 0.5);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-saltar:hover {
+            transform: scale(1.05);
+            background: #ffcc00;
+        }
+
+        /* --- ESTILOS ORIGINALES --- */
         header {
             background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
             color: white;
@@ -94,7 +148,7 @@
 
         .tutor-profile { display: flex; align-items: center; gap: 30px; flex-wrap: wrap; background: #f8f9fc; padding: 20px; border-radius: 15px; border: 1px solid #e3e6f0; }
         .tutor-photo-placeholder { width: 180px; height: 180px; background: #eaecf4; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 4px solid var(--white); box-shadow: 0 5px 15px rgba(0,0,0,0.1); overflow: hidden; }
-        .tutor-photo-placeholder i { font-size: 80px; color: #b7b9cc; }
+        .tutor-photo-placeholder img { width: 100%; height: 100%; object-fit: cover; }
         .tutor-details { flex: 1; min-width: 250px; }
         .tutor-name { font-size: 1.4rem; font-weight: 600; color: var(--dark); margin-bottom: 5px; display: block; }
         .tutor-academic { font-size: 0.9rem; color: #5a5c69; list-style: none; padding: 0; }
@@ -150,7 +204,17 @@
 </head>
 <body>
 
-        
+<!-- VENTANA EMERGENTE (MODAL) DE GAMMA -->
+<div id="modal-presentacion">
+    <div class="modal-content">
+        <!-- Reemplaza TU_CODIGO_AQUI con tu link de Embed de Gamma -->
+        <iframe src="https://gamma.app/embed/TU_CODIGO_AQUI" allow="fullscreen"></iframe>
+    </div>
+    <button class="btn-saltar" onclick="cerrarPresentacion()">
+        <i class="fas fa-forward"></i> Saltar Presentación e Ir al Curso
+    </button>
+</div>
+
 <header>
     <h1>Tecnologías del Aprendizaje y la Comunicación</h1>
     <p><i class="fas fa-graduation-cap"></i> Tercero Básico | Diseño Instruccional 2026</p>
@@ -165,16 +229,16 @@
         <button class="tab-button" id="btn-eval" onclick="openTab(event, 'eval')"><i class="fas fa-clipboard-check"></i> Evaluación</button>
         <button class="tab-button" onclick="openTab(event, 'recursos')"><i class="fas fa-laptop-code"></i> Recursos Virtuales</button>
         <button class="tab-button" onclick="openTab(event, 'eactividades')"><i class="fas fa-puzzle-piece"></i> E-actividades</button>
-        <button class="tab-button" onclick="openTab(event, 'revistas')"><i class="fas fa-book"></i> Revistas Digitales</button>
+        <button class="tab-button" onclick="openTab(event, 'revistas')"><i class="fas fa-book-open"></i> Revistas Digitales</button>
     </div>
 
-    <!-- PESTAÑA INFO -->
+    <!-- PESTAÑA: INFO -->
     <div id="info" class="tab-content active">
         <section class="card">
             <h2><i class="fas fa-user-tie"></i> Información del Tutor</h2>
             <div class="tutor-profile">
                 <div class="tutor-photo-placeholder">
-                    <img src="docs/i.JPG" alt="Foto de Edson Tun Quim" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="docs/i.JPG" alt="Foto de Edson Tun Quim">
                 </div>
                 <div class="tutor-details">
                     <span class="tutor-name">Edson Emanuel Tun Quim</span>
@@ -196,30 +260,30 @@
             <strong>Grado: Tercero Básico</strong></p>
 
             <h2><i class="fas fa-file-alt"></i> 2. Descripción del curso</h2>
-            <p>Las Tecnologías del Aprendizaje y la Comunicación (TAC) orientan las Tecnologías de la Información y la Comunicación (TIC) hacia usos formativos; es decir, a una reorientación para que el proceso de enseñanza-aprendizaje-evaluación esté centrado en el estudiante y potencialice, a su vez, las habilidades para utilizar el conjunto de servicios, redes, software y dispositivos que ofrece la tecnología digital, con el fin de mejorar los procesos de aprendizaje y la calidad de vida de las personas. Con esta reorientación se reconoce que las funciones que realizan las personas deben estar relacionadas con sus estilos de aprendizaje, el uso de herramientas y el trabajo profesional. En otras palabras, los estudiantes necesitan desarrollarse tecnológicamente, para utilizar las herramientas en diversos ambientes y para la resolución de problemas. Las TAC potencializan los diferentes estilos de aprendizaje y apoyan las necesidades individuales. Por otra parte, promueven una educación inclusiva y flexible; y la formación de usuarios independientes y creativos, que seleccionen las fuentes de información con sentido ético y crítico para que puedan discernir cuál es la información confiable, que respeten en todo momento los derechos de autor y no sean parte de actos de plagio.</p>
+            <p>Las Tecnologías del Aprendizaje y la Comunicación (TAC) orientan las Tecnologías de la Información y la Comunicación (TIC) hacia usos formativos; es decir, a una reorientación para que el proceso de enseñanza-aprendizaje-evaluación esté centrado en el estudiante y potencialice, a su vez, las habilidades para utilizar el conjunto de servicios, redes, software y dispositivos que ofrece la tecnología digital...</p>
 
             <h2><i class="fas fa-user-graduate"></i> 3. Contribución del curso al perfil de egreso del participante</h2>
-            <p>El área pretende que los estudiantes desarrollen habilidades que les permitan aprender a aprender, generar nuevos conocimientos y experiencias y utilizar las herramientas digitales como un vehículo para innovar. Estas habilidades deben ir acompañadas de la responsabilidad en el uso de dichas herramientas. El propósito final es contribuir a su desarrollo como personas creativas, solidarias y socialmente activas. Tecnologías del Aprendizaje y la Comunicación, para el Ciclo de Educación Básica del Nivel Medio, incluye componentes interrelacionados para que los estudiantes desarrollen habilidades y destrezas que les permitan desarrollar sus competencias tecnológicas.</p>
+            <p>El área pretende que los estudiantes desarrollen habilidades que les permitan aprender a aprender, generar nuevos conocimientos y experiencias y utilizar las herramientas digitales como un vehículo para innovar...</p>
 
             <h2><i class="fas fa-bullseye"></i> 4. Competencias generales</h2>
             <ul class="info-list">
                 <li><i class="fas fa-check-circle"></i> 1. Selecciona herramientas tecnológicas que le permitan el desarrollo de habilidades útiles para su desempeño en la vida cotidiana.</li>
-                <li><i class="fas fa-check-circle"></i> 2. Emplea tecnologías colaborativas e interactivas para generar ideas, comprobar conceptos y crear recursos innovadores en equipo, con expertos o integrantes de la comunidad, para proponer soluciones a problemas de la vida cotidiana.</li>
-                <li><i class="fas fa-check-circle"></i> 3. Crea trabajos innovadores, reutilizando y combinando recursos digitales de manera responsable y ética, al utilizar la tecnología para interactuar en red o en línea.</li>
+                <li><i class="fas fa-check-circle"></i> 2. Emplea tecnologías colaborativas e interactivas para generar ideas, comprobar conceptos y crear recursos innovadores...</li>
+                <li><i class="fas fa-check-circle"></i> 3. Crea trabajos innovadores, reutilizando y combinando recursos digitales de manera responsable y ética...</li>
             </ul>
 
             <h2><i class="fas fa-chart-line"></i> 5. Indicadores de logro</h2>
             <ul class="info-list">
                 <li><i class="fas fa-star"></i> Identifica las herramientas tecnológicas más adecuadas para resolver problemas específicos de su entorno cotidiano.</li>
                 <li><i class="fas fa-star"></i> Compara diferentes recursos digitales para determinar cuál facilita de mejor manera su desempeño académico y personal.</li>
-                <li><i class="fas fa-star"></i> Utiliza plataformas interactivas para el intercambio de ideas y la construcción colectiva de nuevos conocimientos con su comunidad.</li>
-                <li><i class="fas fa-star"></i> Propone soluciones creativas a dificultades diarias mediante el uso de tecnologías que permiten el trabajo en equipo con expertos.</li>
-                <li><i class="fas fa-star"></i> Emplea recursos digitales para comprobar conceptos teóricos y convertirlos en aplicaciones prácticas para su realidad.</li>
+                <li><i class="fas fa-star"></i> Utiliza plataformas interactivas para el intercambio de ideas y la construcción colectiva de nuevos conocimientos.</li>
+                <li><i class="fas fa-star"></i> Propone soluciones creativas a dificultades diarias mediante el uso de tecnologías que permiten el trabajo en equipo.</li>
+                <li><i class="fas fa-star"></i> Emplea recursos digitales para comprobar conceptos teóricos y convertirlos en aplicaciones prácticas.</li>
             </ul>
         </section>
     </div>
 
-    <!-- PESTAÑA PROGRAMA -->
+    <!-- PESTAÑA: PROGRAMA -->
     <div id="programa" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-table"></i> Programa Completo del Curso</h2>
@@ -274,7 +338,7 @@
         </section>
     </div>
 
-    <!-- PESTAÑA SEMANA 1 -->
+    <!-- PESTAÑA: SEMANA 1 -->
     <div id="semana1" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-globe"></i> Semana 1: Navegadores y Buscadores</h2>
@@ -317,8 +381,7 @@
 
             <div id="entrega-s1" style="display: none; margin-top: 20px; padding: 20px; border: 2px dashed var(--primary); border-radius: 15px; background: #f1f4ff;">
                 <div style="background: #fff3cd; color: #856404; padding: 15px; border-radius: 10px; margin-bottom: 15px; border-left: 5px solid var(--accent);">
-                    <i class="fas fa-exclamation-circle"></i> 
-                    Revise la rúbrica de calificación de la actividad, guarde su documento en formato <strong>PDF</strong> y agréguele su nombre y apellido completo.
+                    <i class="fas fa-exclamation-circle"></i> Revise la rúbrica de calificación de la actividad, guarde su documento en formato <strong>PDF</strong> y agréguele su nombre y apellido completo.
                 </div>
                 <form action="https://formspree.io/f/mqaeapzd" method="POST" enctype="multipart/form-data">
                     <input type="text" name="Nombre" placeholder="Tu nombre completo" required style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ccc;">
@@ -335,7 +398,7 @@
         </section>
     </div>
 
-    <!-- PESTAÑA SEMANA 2 -->
+    <!-- PESTAÑA: SEMANA 2 -->
     <div id="semana2" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-search"></i> Semana 2: Buscadores Académicos</h2>
@@ -375,14 +438,9 @@
                 <i class="fas fa-upload"></i> Entregar Tarea
             </button>
 
-            <button class="btn-action btn-secondary" onclick="document.getElementById('btn-eval').click();">
-                <i class="fas fa-clipboard-list"></i> Ver Rúbrica de la Semana
-            </button>
-
             <div id="entrega-s2" style="display: none; margin-top: 20px; padding: 20px; border: 2px dashed var(--primary); border-radius: 15px; background: #f1f4ff;">
                 <div style="background: #fff3cd; color: #856404; padding: 15px; border-radius: 10px; margin-bottom: 15px; border-left: 5px solid var(--accent);">
-                    <i class="fas fa-info-circle"></i> 
-                    <strong>Instrucción:</strong> Revise la rúbrica de calificación de la actividad, guarde su documento en formato <strong>PDF</strong> y agréguele su nombre y apellido completo.
+                    <i class="fas fa-info-circle"></i> <strong>Instrucción:</strong> Revise la rúbrica de calificación de la actividad, guarde su documento en formato <strong>PDF</strong> y agréguele su nombre y apellido completo.
                 </div>
                 <form action="https://formspree.io/f/mqaeapzd" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="_to" value="edsonquim1986@gmail.com">
@@ -393,10 +451,13 @@
                     </button>
                 </form>
             </div>
+            <button class="btn-action btn-secondary" onclick="document.getElementById('btn-eval').click();">
+                <i class="fas fa-clipboard-list"></i> Ver Rúbrica de la Semana
+            </button>
         </section>
     </div>
 
-    <!-- PESTAÑA EVALUACIÓN -->
+    <!-- PESTAÑA: EVALUACIÓN -->
     <div id="eval" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-check-double"></i> Evaluación del curso</h2>
@@ -501,7 +562,7 @@
         </section>
     </div>
 
-    <!-- PESTAÑA RECURSOS -->
+    <!-- PESTAÑA: RECURSOS -->
     <div id="recursos" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-laptop-code"></i> Recursos Virtuales</h2>
@@ -550,7 +611,7 @@
         </section>
     </div>
 
-    <!-- PESTAÑA REVISTAS DIGITALES -->
+    <!-- PESTAÑA: REVISTAS DIGITALES -->
     <div id="revistas" class="tab-content">
         <section class="card">
             <h2><i class="fa fa-book"></i> Revistas Digitales</h2>
@@ -581,7 +642,7 @@
         </section>
     </div>
 
-    <!-- PESTAÑA E-ACTIVIDADES -->
+    <!-- PESTAÑA: E-ACTIVIDADES -->
     <div id="eactividades" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-puzzle-piece"></i> E-actividades Interactivas</h2>
@@ -597,37 +658,26 @@
                 </div>
 
                 <div class="role-card" style="padding: 1rem;">
-                    <div id="contenedor-quiz" style="background: #ffffff; border-radius: 15px;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                            <h3 style="font-size: 1.1rem; color: #4e73df; margin: 0;">2. Desafío del Investigador Académico</h3>
-                            <button onclick="activarPantallaCompleta()" style="background: #4e73df; color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; font-size: 0.8rem;">
-                                <i class="fas fa-expand"></i> Pantalla Completa
-                            </button>
-                        </div>
-                        <div style="position: relative; width: 100%; padding-top: 65%; background: #f8f9fc; border-radius: 10px; overflow: hidden; border: 1px solid #e3e6f0;">
-                            <iframe id="iframe-quiz" src="https://wayground.com/embed/quiz/69f1311b4e06d4d45a4b53cc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
-                        </div>
+                    <h3 style="font-size: 1.1rem; color: #4e73df; margin-bottom: 15px;">2. Desafío del Investigador Académico</h3>
+                    <div style="position: relative; width: 100%; padding-top: 65%; background: #f8f9fc; border-radius: 10px; overflow: hidden; border: 1px solid #e3e6f0;">
+                        <iframe id="iframe-quiz" src="https://wayground.com/embed/quiz/69f1311b4e06d4d45a4b53cc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+                    </div>
+                    <button onclick="activarPantallaCompleta()" class="btn-action" style="width: 100%; font-size: 0.8rem; margin-top: 10px;">
+                        <i class="fas fa-expand"></i> Pantalla Completa
+                    </button>
+                </div>
+
+                <div class="role-card" style="padding: 1rem; text-align: center;">
+                    <h3 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 15px;">3. Kahoot: El Gran Reto</h3>
+                    <div style="background: #ffffff; border: 2px solid #eee; border-radius: 15px; padding: 20px;">
+                        <img src="docs/assignment-qr-code.png" alt="Código QR Kahoot" style="width: 100%; max-width: 200px;">
+                        <p style="color: #666; font-size: 0.85rem; margin-top: 10px;">Escanea el código para participar</p>
                     </div>
                 </div>
 
-                <div class="role-card" style="padding: 1rem; max-width: 350px; margin: auto;">
-                    <h3 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 15px; text-align: center;">3. Kahoot: El Gran Reto</h3>
-                    <div style="background: #ffffff; border: 2px solid #eee; border-radius: 15px; padding: 20px; display: flex; flex-direction: column; align-items: center;">
-                        <div style="width: 200px; height: 200px;">
-                            <img src="docs/assignment-qr-code.png" alt="QR Kahoot" style="width: 100%; height: 100%; object-fit: contain;">
-                        </div>
-                        <p style="color: #666; font-size: 0.85rem; margin-top: 10px;">Escanea para participar</p>
-                    </div>
-                </div>
-
-                <div class="role-card" style="grid-column: 1 / -1; border: 2px solid #6c5ce7; background: #ffffff;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap;">
-                        <h3 style="font-size: 1.2rem; color: #6c5ce7; margin: 0;">4. El Museo de la Verdad Científica</h3>
-                        <a href="https://padlet.com/embed/vqepz9cakemsfesq" target="_blank" style="background: #6c5ce7; color: white; padding: 8px 15px; border-radius: 8px; text-decoration: none;">
-                            <i class="fas fa-external-link-alt"></i> Abrir en ventana aparte
-                        </a>
-                    </div>
-                    <div style="border-radius: 12px; overflow: hidden;">
+                <div class="role-card" style="grid-column: 1 / -1; border: 2px solid #6c5ce7;">
+                    <h3 style="color: #6c5ce7;">4. El Museo de la Verdad Científica (Padlet)</h3>
+                    <div style="border-radius: 12px; overflow: hidden; margin-top: 15px;">
                         <iframe src="https://padlet.com/embed/vqepz9cakemsfesq" style="width: 100%; height: 600px; border: none;"></iframe>
                     </div>
                 </div>
@@ -639,6 +689,17 @@
 <a href="https://wa.me/50232168036" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 <script>
+    // --- LÓGICA DEL MODAL ---
+    function cerrarPresentacion() {
+        const modal = document.getElementById('modal-presentacion');
+        modal.style.transition = "opacity 0.5s ease";
+        modal.style.opacity = "0";
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, 500);
+    }
+
+    // --- LÓGICA DE PESTAÑAS ---
     function openTab(evt, tabName) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tab-content");
@@ -657,11 +718,7 @@
 
     function toggleForm(id) {
         var x = document.getElementById(id);
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
+        x.style.display = (x.style.display === "none") ? "block" : "none";
     }
 
     function activarPantallaCompleta() {
