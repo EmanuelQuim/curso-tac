@@ -233,6 +233,7 @@
         <button class="tab-button" id="btn-semana2" onclick="openTab(event, 'semana2')"><i class="fas fa-calendar-plus"></i> Semana 2</button>
         <button class="tab-button" id="btn-eval" onclick="openTab(event, 'eval')"><i class="fas fa-clipboard-check"></i> Evaluación</button>
         <button class="tab-button" onclick="openTab(event, 'recursos')"><i class="fas fa-laptop-code"></i> Recursos Virtuales</button>
+        <button class="tab-button" onclick="openTab(event, 'colaborativo')"><i class="fas fa-users"></i> Trabajo Colaborativo</button>
         <button class="tab-button" onclick="openTab(event, 'eactividades')"><i class="fas fa-puzzle-piece"></i> E-actividades</button>
         <button class="tab-button" onclick="openTab(event, 'revistas')"><i class="fas fa-book-open"></i> Revistas Digitales</button>
     </div>
@@ -267,7 +268,7 @@
             <h2><i class="fas fa-file-alt"></i> 2. Descripción del curso</h2>
             <p>Las Tecnologías del Aprendizaje y la Comunicación (TAC) orientan las Tecnologías de la Información y la Comunicación (TIC) hacia usos formativos; es decir, a una reorientación para que el proceso de enseñanza-aprendizaje-evaluación esté centrado en el estudiante y potencialice, a su vez, las habilidades para utilizar el conjunto de servicios, redes, software y dispositivos que ofrece la tecnología digital...</p>
 
-            <h2><i class="fas fa-user-graduate"></i> 3. Contribución del curso al perfil de egreso del participantee</h2>
+            <h2><i class="fas fa-user-graduate"></i> 3. Contribución del curso al perfil de egreso del participante</h2>
             <p>El área pretende que los estudiantes desarrollen habilidades que les permitan aprender a aprender, generar nuevos conocimientos y experiencias y utilizar las herramientas digitales como un vehículo para innovar...</p>
 
             <h2><i class="fas fa-bullseye"></i> 4. Competencias generales</h2>
@@ -567,7 +568,7 @@
         </section>
     </div>
 
-    <!-- PESTAÑA: RECURSOS (INTEGRACIÓN DE PADLET COMPLETA) -->
+    <!-- PESTAÑA: RECURSOS -->
     <div id="recursos" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-laptop-code"></i> Recursos Virtuales</h2>
@@ -614,7 +615,7 @@
                 </div>
             </div>
 
-            <!-- BLOQUE AGREGADO: ANÁLISIS DOCENTE DE PADLET -->
+            <!-- BLOQUE: ANÁLISIS DOCENTE DE PADLET -->
             <div class="role-card" style="margin-top: 30px; border-left: 5px solid var(--secondary);">
                 <h2 style="margin-top: 0; color: var(--dark);"><i class="fas fa-chalkboard" style="color: var(--secondary);"></i> Análisis Tecnológico: Padlet en el Aula Virtual</h2>
                 
@@ -658,7 +659,41 @@
                 <p><i class="fas fa-robot" style="color: var(--primary);"></i> <strong>Inteligencia Artificial:</strong> Incorpora la función nativa generativa <em>"I can't draw" (No sé dibujar)</em>, permitiendo a los alumnos crear imágenes artísticas personalizadas mediante prompts textuales directos en el muro.</p>
                 <p><i class="fas fa-history"></i> <strong>Origen:</strong> Nació en el año 2008 bajo el nombre de <strong>Wallwisher</strong>, estructurado inicialmente como un espacio recreativo de felicitaciones antes de optimizarse por completo hacia la educación global.</p>
             </div>
+        </section>
+    </div>
 
+    <!-- PESTAÑA: TRABAJO COLABORATIVO (INSTRUCCIONES Y PADLET INTEGRADOS) -->
+    <div id="colaborativo" class="tab-content">
+        <section class="card">
+            <h2><i class="fas fa-users"></i> Trabajo Colaborativo: Feria de Micro-Podcasts</h2>
+            <p>Bienvenidos a nuestro espacio de co-creación radial. En esta actividad pasaremos de la teoría a la acción digital compartiendo experiencias e ideas mediante audio.</p>
+            
+            <!-- GUÍA DE PARTICIPACIÓN PARA EL ALUMNO -->
+            <div class="role-card" style="margin-bottom: 25px; border-left: 5px solid var(--accent); background: #fffdf6;">
+                <h3 style="color: #d39e00; margin-top: 0;"><i class="fas fa-microphone-alt"></i> Actividad: "Ciberseguridad en 60 Segundos"</h3>
+                <p><strong>Instrucción General:</strong> Imagina que eres un experto en ciberseguridad o un locutor de radio. Debes grabar un micro-podcast (nota de voz) con una duración máxima de <strong>1 minuto (60 segundos)</strong> donde expliques un caso real o ficticio sobre los riesgos de seguridad al navegar en internet y cómo prevenirlo.</p>
+                
+                <h4 style="margin-bottom: 5px; color: var(--dark);"><i class="fas fa-list-ol"></i> Pasos para participar en el Padlet:</h4>
+                <ol style="padding-left: 20px; margin-top: 5px; font-size: 0.9rem;">
+                    <li style="margin-bottom: 8px;">Haz clic en el botón flotante con el símbolo de más <strong>(+)</strong> que aparece abajo a la derecha dentro del muro de Padlet.</li>
+                    <li style="margin-bottom: 8px;">En el <strong>Título</strong> de tu publicación, escribe tu <strong>Nombre y Apellido Completo</strong>.</li>
+                    <li style="margin-bottom: 8px;">Haz clic en el botón de los tres puntos <strong>(...)</strong> en el menú de la nota y selecciona la opción <strong>"Grabadora de audio"</strong> (o el ícono del micrófono).</li>
+                    <li style="margin-bottom: 8px;">Graba tu cápsula educativa (máximo 60 segundos), escúchala para verificar que se oiga bien y haz clic en <strong>Guardar</strong>.</li>
+                    <li style="margin-bottom: 8px;">En la descripción de texto de la nota, escribe una pequeña frase que resuma tu consejo de oro. ¡Luego haz clic en <strong>Publicar</strong>!</li>
+                </ol>
+                <div style="background: rgba(28, 200, 138, 0.1); padding: 10px; border-radius: 8px; font-size: 0.85rem; color: #155724; border-left: 4px solid var(--secondary); margin-top: 15px;">
+                    <i class="fas fa-star"></i> <strong>Reto de Co-evaluación:</strong> Al terminar de subir tu audio, escucha el podcast de al menos 2 compañeros y déjales un comentario constructivo o una estrella de valoración dentro del mismo muro.
+                </div>
+            </div>
+
+            <!-- CONTENEDOR DEL IFRAME DE PADLET -->
+            <div class="role-card" style="grid-column: 1 / -1; border: 2px solid var(--primary);">
+                <h3 style="color: var(--primary); margin-top: 0;"><i class="fas fa-window-maximize"></i> Pizarra Radial Interactiva</h3>
+                <div style="border-radius: 12px; overflow: hidden; margin-top: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <!-- REEMPLAZA EL CONTENIDO DE src="..." CON EL ENLACE DE TU NUEVO MURO DE PADLET PARA LOS PODCASTS -->
+                    <iframe src="" style="width: 100%; height: 650px; border: none; background: #f8f9fc;"></iframe>
+                </div>
+            </div>
         </section>
     </div>
 
