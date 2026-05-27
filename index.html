@@ -754,26 +754,32 @@
     <div id="audiovisuales" class="tab-content">
         <section class="card">
             <h2><i class="fas fa-headphones"></i> Recursos Audiovisuales: Cápsulas de Aprendizaje</h2>
-            <p>Escucha los siguientes episodios en audio diseñados para profundizar en los conceptos clave del curso y guiar tu desarrollo en los entornos TAC virtuales:</p>
+            <p>Escucha los siguientes episodios en audio diseñados para profundizar en los conceptos clave del curso y observa el ecualizador visual interactivo al reproducirlos:</p>
             
             <div class="roles-container">
-                <div class="role-card" style="border-left: 5px solid var(--primary);">
-                    <h3 style="margin-top:0; color: var(--primary);"><i class="fas fa-play"></i> Podcast 1: Aprendizajes en tiempos de MOOCs</h3>
-                    <p><strong>Descripción:</strong> Una producción analítica enfocada en la revolución de la educación superior abierta y masiva. En este episodio desglosamos qué es un MOOC, sus rasgos fundamentales y sopesamos de forma crítica sus ventajas didácticas ante los índices de deserción. Asimismo, se clarifican las diferencias estructurales con el e-Learning cerrado y los retos metodológicos de cara al futuro.</p>
-                    <div style="margin-top: 15px; background: #eaecf4; padding: 10px; border-radius: 10px; display: flex; justify-content: center;">
-                        <audio controls style="width: 100%;">
-                            <source src="docs/p1.mp3" type="audio/mpeg">
+                <div class="role-card" style="border-left: 5px solid var(--primary); display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="margin-top:0; color: var(--primary);"><i class="fas fa-play"></i> Podcast 1: Aprendizajes en tiempos de MOOCs</h3>
+                        <p><strong>Descripción:</strong> Una producción analítica enfocada en la revolución de la educación superior abierta y masiva. En este episodio desglosamos qué es un MOOC, sus rasgos fundamentales y sopesamos de forma crítica sus ventajas didácticas ante los índices de deserción. Asimismo, se clarifican las diferencias estructurales con el e-Learning cerrado y los retos metodológicos de cara al futuro.</p>
+                    </div>
+                    <div style="margin-top: 15px; background: #2e3b4e; padding: 15px; border-radius: 15px; text-align: center;">
+                        <canvas id="canvas1" style="width: 100%; height: 80px; background: #1a222d; border-radius: 10px; display: block; margin-bottom: 10px;"></canvas>
+                        <audio id="audio1" crossorigin="anonymous" controls style="width: 100%;">
+                            <source src="docs/podcast_moocs.mp3" type="audio/mpeg">
                             Tu navegador no soporta el elemento de audio.
                         </audio>
                     </div>
                 </div>
 
-                <div class="role-card" style="border-left: 5px solid var(--secondary);">
-                    <h3 style="margin-top:0; color: var(--secondary);"><i class="fas fa-play"></i> Podcast 2: Navegadores, Buscadores y Rigor Científico</h3>
-                    <p><strong>Descripción:</strong> Cápsula informativa dedicada a la correcta diferenciación técnica entre las herramientas que empleamos diariamente en internet. Aborda la función del navegador como acceso de red, el buscador general como indexador y resalta la trascendencia de los buscadores académicos especializados (como andamiajes de investigación) para resguardar el sentido ético y combatir el plagio escolar.</p>
-                    <div style="margin-top: 15px; background: #eaecf4; padding: 10px; border-radius: 10px; display: flex; justify-content: center;">
-                        <audio controls style="width: 100%;">
-                            <source src="docs/p2.mp3" type="audio/mpeg">
+                <div class="role-card" style="border-left: 5px solid var(--secondary); display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="margin-top:0; color: var(--secondary);"><i class="fas fa-play"></i> Podcast 2: Navegadores, Buscadores y Rigor Científico</h3>
+                        <p><strong>Descripción:</strong> Cápsula informativa dedicada a la correcta diferenciación técnica entre las herramientas que empleamos diariamente en internet. Aborda la función del navegador como acceso de red, el buscador general como indexador y resalta la trascendencia de los buscadores académicos especializados (como andamiajes de investigación) para resguardar el sentido ético y combatir el plagio escolar.</p>
+                    </div>
+                    <div style="margin-top: 15px; background: #2e3b4e; padding: 15px; border-radius: 15px; text-align: center;">
+                        <canvas id="canvas2" style="width: 100%; height: 80px; background: #1a222d; border-radius: 10px; display: block; margin-bottom: 10px;"></canvas>
+                        <audio id="audio2" crossorigin="anonymous" controls style="width: 100%;">
+                            <source src="docs/podcast_navegadores.mp3" type="audio/mpeg">
                             Tu navegador no soporta el elemento de audio.
                         </audio>
                     </div>
@@ -824,5 +830,76 @@
     }
 </script>
 
+<script>
+    // --- MOTOR DE VISUALIZACIÓN DE AUDIO ESTILO WINDOWS MEDIA ---
+    function iniciarVisualizador(idAudio, idCanvas, colorPrincipal, colorSecundario) {
+        const audio = document.getElementById(idAudio);
+        const canvas = document.getElementById(idCanvas);
+        const ctx = canvas.getContext('2d');
+        
+        let audioCtx;
+        let analyser;
+        let source;
+        let inicializado = false;
+
+        // Se inicializa el motor al darle primer clic por restricciones de seguridad del navegador
+        audio.addEventListener('play', function() {
+            if (!inicializado) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                analyser = audioCtx.createAnalyser();
+                source = audioCtx.createMediaElementSource(audio);
+                
+                source.connect(analyser);
+                analyser.connect(audioCtx.destination);
+                
+                // Nivel de detalle de las barras (más alto = barras más delgadas y precisas)
+                analyser.fftSize = 64; 
+                inicializado = true;
+                animar();
+            }
+        });
+
+        function animar() {
+            if (!inicializado) return;
+            requestAnimationFrame(animar);
+
+            const bufferLength = analyser.frequencyBinCount;
+            const dataArray = new Uint8Array(bufferLength);
+            analyser.getByteFrequencyData(dataArray);
+
+            // Ajustar tamaño real del lienzo para evitar pixelado
+            canvas.width = canvas.clientWidth;
+            canvas.height = canvas.clientHeight;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const barWidth = (canvas.width / bufferLength) * 1.4;
+            let barHeight;
+            let x = 0;
+
+            for (let i = 0; i < bufferLength; i++) {
+                barHeight = (dataArray[i] / 255) * canvas.height * 0.85;
+
+                // Genera un degradado de color retro/moderno para cada barra
+                const gradient = ctx.createLinearGradient(0, canvas.height, 0, canvas.height - barHeight);
+                gradient.addColorStop(0, colorPrincipal);
+                gradient.addColorStop(1, colorSecundario);
+
+                ctx.fillStyle = gradient;
+                // Dibuja barras con bordes ligeramente redondeados estilizados
+                ctx.fillRect(x, canvas.height - barHeight, barWidth - 3, barHeight);
+
+                x += barWidth;
+            }
+        }
+    }
+
+    // Inicializar los ecualizadores para ambos podcasts con sus respectivas paletas cromáticas
+    // Podcast 1: Tonos Azules y Morados de la UMG
+    iniciarVisualizador('audio1', 'canvas1', '#4e73df', '#9b5de5');
+    // Podcast 2: Tonos Verdes Neón y Cyan Tecnológicos
+    iniciarVisualizador('audio2', 'canvas2', '#1cc88a', '#00f5d4');
+</script>
+    
 </body>
 </html>
