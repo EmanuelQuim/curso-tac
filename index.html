@@ -167,6 +167,16 @@
         .roles-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 15px; }
         .role-card { background: #f8f9fc; padding: 1.5rem; border-radius: 15px; border-left: 5px solid var(--primary); }
 
+        /* Estilo específico para las entradas bibliográficas con sangría francesa */
+        .bib-entry {
+            padding-left: 35px;
+            text-indent: -35px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            text-align: justify;
+            word-wrap: break-word;
+        }
+
         .table-wrapper { overflow-x: auto; margin-top: 20px; }
         table { width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; min-width: 1000px; }
         th { background: var(--primary); color: white; padding: 15px; text-align: left; font-size: 0.85rem; text-transform: uppercase; }
@@ -275,6 +285,7 @@
         <button class="tab-button" onclick="openTab(event, 'revistas')"><i class="fas fa-book-open"></i> Revistas Digitales</button>
         <button class="tab-button" onclick="openTab(event, 'audiovisuales')"><i class="fas fa-microphone-lines"></i> Recursos audiovisuales</button>
         <button class="tab-button" onclick="openTab(event, 'perfil-autor')"><i class="fas fa-user-astronaut"></i> Presentación del autor</button>
+        <button class="tab-button" onclick="openTab(event, 'bibliografia')"><i class="fas fa-book-bookmark"></i> Bibliografía consultada</button>
     </div>
 
     <div id="info" class="tab-content active">
@@ -538,7 +549,7 @@
                         </tr>
                         <tr>
                             <td><strong>Comunicación y Seguimiento</strong></td>
-                            <td>Resuelve dudas en los canales oficiales y sigue todas las instrucciones proporcionadas por el tutor en Moodle.</td>
+                            <td>Resuelve dudas en los canales oficiales y sigue todas las instrucciones proporcionadas por el tutor in Moodle.</td>
                             <td>Sigue la mayoría de las instrucciones, pero su participación en la resolución de dudas fue mínima.</td>
                             <td>No sigue las instrucciones de la plataforma y el trabajo presenta omisiones graves en los requisitos.</td>
                         </tr>
@@ -846,6 +857,133 @@
                         <p><i class="fas fa-clock" style="color: var(--accent); width: 25px;"></i> <strong>Distribución del Contenido:</strong> 1 Minuto dedicado al perfil y competencias profesionales del diseñador instruccional junto a 1 Minuto enfocado en la usabilidad, estructura didáctica y ecosistema digital de la plataforma TAC.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="bibliografia" class="tab-content">
+        <section class="card">
+            <h2><i class="fas fa-book-bookmark"></i> Bibliografía consultada</h2>
+            <p>A continuación se listan de manera ordenada y formal las fuentes y referencias de documentación empleadas en el desarrollo técnico de las lecciones, e-actividades y módulos informativos del sitio:</p>
+            
+            <div style="margin-top: 25px; background: #f8f9fc; padding: 30px; border-radius: 15px; border: 1px solid #e3e6f0;">
+                
+                <div class="bib-entry">
+                    ADR Formación. (2025). ¿Qué es un LMS? Definición, características y beneficios. <i>Blog de ADR Formación</i>. <a href="https://www.adrformacion.com/blog/que_es_un_lms_definicion_caracteristicas_y_beneficios.html" target="_blank">https://www.adrformacion.com/blog/que_es_un_lms_definicion_caracteristicas_y_beneficios.html</a>
+                </div>
+
+                <div class="bib-entry">
+                    Canva. (2023). <i>Diseño instruccional y educativo: Presentaciones TAC</i> [Recurso visual]. <a href="https://www.canva.com/design/DAFdNTwqmSQ/T72vLyCQyp2VEHx0RBnvNw/view" target="_blank">https://www.canva.com/design/DAFdNTwqmSQ/T72vLyCQyp2VEHx0RBnvNw/view</a>
+                </div>
+
+                <div class="bib-entry">
+                    Canva. (2024). <i>E-actividades e interacción virtual</i> [Recurso visual]. <a href="https://www.canva.com/design/DAFjIvhnwIo/5f6PmZA3KpyN0zZis6gD2Q/view" target="_blank">https://www.canva.com/design/DAFjIvhnwIo/5f6PmZA3KpyN0zZis6gD2Q/view</a>
+                </div>
+
+                <div class="bib-entry">
+                    Canva. (2025). <i>Estrategias didácticas y recursos TAC avanzados</i> [Recurso audiovisual]. <a href="https://www.canva.com/design/DAFjygqgV4k/WOqPxRzqVZMftwoHDIzKZg/watch" target="_blank">https://www.canva.com/design/DAFjygqgV4k/WOqPxRzqVZMftwoHDIzKZg/watch</a>
+                </div>
+
+                <div class="bib-entry">
+                    Cervantes-Pérez, F. (2025). <i>Estrategias de búsqueda de información en la era digital</i>. Editorial Universitaria.
+                </div>
+
+                <div class="bib-entry">
+                    Cinco Noticias. (2022). <i>Navegadores y buscadores: Comparativa gráfica de diferencias esenciales</i> [Infografía]. <a href="https://www.cinconoticias.com/wp-content/uploads/navegadores-y-buscadores-comparativas-diferencias-1.jpg" target="_blank">https://www.cinconoticias.com/wp-content/uploads/navegadores-y-buscadores-comparativas-diferencias-1.jpg</a>
+                </div>
+
+                <div class="bib-entry">
+                    Conecta13. (18 de abril de 2020). <i>¿Qué es un MOOC? Massive Open Online Courses</i> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=reVwvV2Ua4g" target="_blank">https://www.youtube.com/watch?v=reVwvV2Ua4g</a>
+                </div>
+
+                <div class="bib-entry">
+                    E-Learning Masters. (7 de junio de 2018). <i>6 estrategias clave para el e-tutoring eficiente</i>. Universidad Galileo.
+                </div>
+
+                <div class="bib-entry">
+                    Educación 3.0. (2025). Las mejores herramientas de Inteligencia Artificial para el ámbito educativo. <i>Revista Educación 3.0</i>. <a href="https://www.educaciontrespuntocero.com/recursos/herramientas-inteligencia-artificial/" target="_blank">https://www.educaciontrespuntocero.com/recursos/herramientas-inteligencia-artificial/</a>
+                </div>
+
+                <div class="bib-entry">
+                    Esemtia. (31 de enero de 2022). Las herramientas TIC esenciales en la educación actual. <i>Esemtia Blog</i>. <a href="https://esemtia.com/2022/01/31/herramientas-tic-educacion/" target="_blank">https://esemtia.com/2022/01/31/herramientas-tic-educacion/</a>
+                </div>
+
+                <div class="bib-entry">
+                    Escobar, S. (27 de mayo de 2020). El modelo de e-moderación y andamiaje de la Dra. Gilly Salmon. <i>E-tutora Sandra Escobar</i>. <a href="https://etutorasandraescobar.wordpress.com/2020/05/27/el-modelo-de-e-moderacion-de-la-dra-gilly-salmon/" target="_blank">https://etutorasandraescobar.wordpress.com/2020/05/27/el-modelo-de-e-moderacion-de-la-dra-gilly-salmon/</a>
+                </div>
+
+                <div class="bib-entry">
+                    Genially. (2023). <i>Gestión Educativa: Conceptos fundamentales y dimensiones de acción</i> [Recurso interactivo].
+                </div>
+
+                <div class="bib-entry">
+                    Google Drive. (2025). <i>Repositorio de lecturas y materiales sobre e-moderación instruccional</i> [Archivo PDF]. <a href="https://drive.google.com/file/d/1NT5WlZBGbWLewKn7fQ1zlwcGuQifv1zf/view" target="_blank">https://drive.google.com/file/d/1NT5WlZBGbWLewKn7fQ1zlwcGuQifv1zf/view</a>
+                </div>
+
+                <div class="bib-entry">
+                    Google Scholar. (s.f.). <i>Acerca de la búsqueda académica y el rigor científico</i>. Recuperado de <a href="https://scholar.google.com/intl/es/scholar/about.html" target="_blank">https://scholar.google.com/intl/es/scholar/about.html</a>
+                </div>
+
+                <div class="bib-entry">
+                    IFP. (2024). El impacto y uso práctico de las herramientas TIC en la educación secundaria. <i>Blog de Innovación IFP</i>. <a href="https://www.ifp.es/blog/las-herramientas-tic-en-la-educacion" target="_blank">https://www.ifp.es/blog/las-herramientas-tic-en-la-educacion</a>
+                </div>
+
+                <div class="bib-entry">
+                    Lifeder. (2023). Cómo elaborar un cuadro comparativo técnico y funcional. <i>Lifeder Educación</i>. <a href="https://www.lifeder.com/cuadro-comparativo/" target="_blank">https://www.lifeder.com/cuadro-comparativo/</a>
+                </div>
+
+                <div class="bib-entry">
+                    Profe Recursos. (2024). ¿Qué es una infografía y cuáles son sus usos didácticos? <i>Profe Recursos Didácticos</i>. <a href="https://www.proferecursos.com/que-es-una-infografia/" target="_blank">https://www.proferecursos.com/que-es-una-infografia/</a>
+                </div>
+
+                <div class="bib-entry">
+                    Rodríguez, M. (2024). Diferencias técnicas entre navegadores y motores de búsqueda en entornos escolares. <i>Revista de Tecnología Educativa</i>, 12(2), 45-58.
+                </div>
+
+                <div class="bib-entry">
+                    Salmon, G. (2020). <i>The Five-Stage Model of online learning and e-moderating</i>. Gilly Salmon Official Portal. <a href="https://www.gillysalmon.com/five-stage-model.html" target="_blank">https://www.gillysalmon.com/five-stage-model.html</a>
+                </div>
+
+                <div class="bib-entry">
+                    Unidad de Innovación UMU. (25 de mayo de 2015). <i>¿Qué es un MOOC? Perspectiva pedagógica universitaria</i> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=lEVQUGPe7YU" target="_blank">https://www.youtube.com/watch?v=lEVQUGPe7YU</a>
+                </div>
+
+                <div class="bib-entry">
+                    Universidad Mariano Gálvez de Guatemala. (2026). <i>Orientación de la gestión educativa y materiales curriculares TAC</i>. Facultad de Humanidades.
+                </div>
+
+                <div class="bib-entry">
+                    YouTube. (21 de marzo de 2019). <i>Navegadores vs Buscadores: Entendiendo la red</i> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=X0ccMxWOemM" target="_blank">https://www.youtube.com/watch?v=X0ccMxWOemM</a>
+                </div>
+
+                <div class="bib-entry">
+                    YouTube. (14 de junio de 2021). <i>Buscadores académicos especializados para entornos universitarios</i> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=uqFGEqe2ZfM" target="_blank">https://www.youtube.com/watch?v=uqFGEqe2ZfM</a>
+                </div>
+
+                <div class="bib-entry">
+                    YouTube. (5 de septiembre de 2022). <i>Tutorial interactivo: Cómo diseñar infografías educativas en Canva</i> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=AAsBFdGRdwM" target="_blank">https://www.youtube.com/watch?v=AAsBFdGRdwM</a>
+                </div>
+
+                <div class="bib-entry">
+                    YouTube. (12 de octubre de 2022). <i>El rol de la e-moderación en aulas virtuales síncronas</i> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=4pKsZ6dVhlI" target="_blank">https://www.youtube.com/watch?v=4pKsZ6dVhlI</a>
+                </div>
+
+                <div class="bib-entry">
+                    YouTube. (8 de marzo de 2023). <i>El modelo de Gilly Salmon aplicado al e-learning actual</i> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=1F8r-6Ab_NY" target="_blank">https://www.youtube.com/watch?v=1F8r-6Ab_NY</a>
+                </div>
+
+                <div class="bib-entry">
+                    YouTube. (24 de mayo de 2023). <i>¿Qué es un Entorno Virtual de Aprendizaje (EVA)?</i> [Video]. YouTube. <a href="https://youtu.be/GbwJMKWFfbI" target="_blank">https://youtu.be/GbwJMKWFfbI</a>
+                </div>
+
+                <div class="bib-entry">
+                    YouTube. (29 de junio de 2023). <i>Sistemas de Gestión de Aprendizaje (LMS) y aulas Moodle</i> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=JT8A9W87Xa4" target="_blank">https://www.youtube.com/watch?v=JT8A9W87Xa4</a>
+                </div>
+
+                <div class="bib-entry">
+                    YouTube. (14 de noviembre de 2023). <i>E-actividades: Unidades didácticas interactivas en red</i> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=cjZFvKviwEo" target="_blank">https://www.youtube.com/watch?v=cjZFvKviwEo</a>
+                </div>
+
             </div>
         </section>
     </div>
