@@ -254,6 +254,38 @@
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
+
+
+        /* --- ESTILOS DEL PIE DE PÁGINA (FOOTER) --- */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+            border-top: 4px solid var(--primary);
+            font-size: 0.85rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-rights {
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .footer-author {
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
     </style>
 </head>
 <body>
@@ -988,6 +1020,18 @@
         </section>
     </div>
 </div>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-author">
+            <i class="fas fa-code"></i> Desarrollado por Edson Emanuel Tun Quim — Carné 96141117138
+        </div>
+        <div class="footer-rights">
+            &copy; 2026 Universidad Mariano Gálvez de Guatemala. Todos los derechos reservados.
+        </div>
+    </div>
+</footer>
 
 <a href="https://wa.me/50232168036" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
